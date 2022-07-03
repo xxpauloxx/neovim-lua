@@ -1,222 +1,222 @@
 {
-    "coc.preferences.hoverTarget": "float",
-    "suggest.floatEnable": true,
-    "suggest.maxPreviewWidth": 50,
-    "suggest.enablePreview": true,
-    "suggest.labelMaxLength": 50,
-    "suggest.removeDuplicateItems": true,
-    "list.maxPreviewHeight": 50,
-    "diagnostic.errorSign": {
-        "type": "string",
-        "description": "Text of error sign",
-        "default": "│"
-      },
-      "diagnostic.warningSign": {
-        "type": "string",
-        "description": "Text of warning sign",
-        "default": "│"
-      },
-      "diagnostic.infoSign": {
-        "type": "string",
-        "description": "Text of info sign",
-        "default": "│"
-      },
-      "diagnostic.hintSign": {
-        "type": "string",
-        "description": "Text of hint sign",
-        "default": "│"
-      },
-    "javascript.suggest.autoImports": true,
-    "java.import.gradle.enabled": true,
-    "java.import.maven.enabled": true,
-    "java.configuration.updateBuildConfiguration": "automatic",
-    "java.import.gradle.wrapper.enabled": true,
-    "java.autobuild.enabled": true,
-    "java.format.enabled": true,
-    "java.referencesCodeLens.enabled": true,
-    "java.signatureHelp.enabled": true,
-    "java.foldingRange.enabled": true,
-    "java.trace.server": "verbose",
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "java.maven.downloadSources": true,
-    "java.format.comments.enabled": true,
-    "java.completion.guessMethodArguments": true,
-    "java.format.onType.enabled": true,
-    "java.codeGeneration.useBlocks": true,
-    "jedi.enable": true,
-    "jedi.startupMessage": false,
-    "jedi.markupKindPreferred": "plaintext",
-    "jedi.trace.server": "off",
-    "jedi.jediSettings.autoImportModules": [],
-    "jedi.executable.command": "jedi-language-server",
-    "jedi.executable.args": [],
-    "jedi.codeAction.nameExtractFunction": "jls_extract_def",
-    "jedi.codeAction.nameExtractVariable": "jls_extract_var",
-    "jedi.completion.disableSnippets": false,
-    "jedi.completion.resolveEagerly": true,
-    "jedi.diagnostics.enable": true,
-    "jedi.diagnostics.didOpen": true,
-    "jedi.diagnostics.didChange": true,
-    "jedi.diagnostics.didSave": true,
-    "jedi.hover.enable": true,
-    "jedi.hover.disable.keyword.all": false,
-    "jedi.hover.disable.keyword.names": [],
-    "jedi.hover.disable.keyword.fullNames": [],
-    "jedi.workspace.extraPaths": [
-        "src"
+  "coc.preferences.hoverTarget": "float",
+  "suggest.floatEnable": true,
+  "suggest.maxPreviewWidth": 50,
+  "suggest.enablePreview": true,
+  "suggest.labelMaxLength": 50,
+  "suggest.removeDuplicateItems": true,
+  "list.maxPreviewHeight": 50,
+  "diagnostic.errorSign": {
+    "type": "string",
+    "description": "Text of error sign",
+    "default": "│"
+  },
+  "diagnostic.warningSign": {
+    "type": "string",
+    "description": "Text of warning sign",
+    "default": "│"
+  },
+  "diagnostic.infoSign": {
+    "type": "string",
+    "description": "Text of info sign",
+    "default": "│"
+  },
+  "diagnostic.hintSign": {
+    "type": "string",
+    "description": "Text of hint sign",
+    "default": "│"
+  },
+  "javascript.suggest.autoImports": true,
+  "java.import.gradle.enabled": true,
+  "java.import.maven.enabled": true,
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.import.gradle.wrapper.enabled": true,
+  "java.autobuild.enabled": true,
+  "java.format.enabled": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.signatureHelp.enabled": true,
+  "java.foldingRange.enabled": true,
+  "java.trace.server": "verbose",
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "java.maven.downloadSources": true,
+  "java.format.comments.enabled": true,
+  "java.completion.guessMethodArguments": true,
+  "java.format.onType.enabled": true,
+  "java.codeGeneration.useBlocks": true,
+  "jedi.enable": true,
+  "jedi.startupMessage": false,
+  "jedi.markupKindPreferred": "plaintext",
+  "jedi.trace.server": "off",
+  "jedi.jediSettings.autoImportModules": [],
+  "jedi.executable.command": "jedi-language-server",
+  "jedi.executable.args": [],
+  "jedi.codeAction.nameExtractFunction": "jls_extract_def",
+  "jedi.codeAction.nameExtractVariable": "jls_extract_var",
+  "jedi.completion.disableSnippets": false,
+  "jedi.completion.resolveEagerly": true,
+  "jedi.diagnostics.enable": true,
+  "jedi.diagnostics.didOpen": true,
+  "jedi.diagnostics.didChange": true,
+  "jedi.diagnostics.didSave": true,
+  "jedi.hover.enable": true,
+  "jedi.hover.disable.keyword.all": false,
+  "jedi.hover.disable.keyword.names": [],
+  "jedi.hover.disable.keyword.fullNames": [],
+  "jedi.workspace.extraPaths": [
+    "src"
+  ],
+  "jedi.workspace.symbols.maxSymbols": 20,
+  "jedi.workspace.symbols.ignoreFolders": [
+    ".nox",
+    ".tox",
+    ".venv",
+    "__pycache__",
+    "venv"
+  ],
+  "clojure-lsp": {
+    "command": "zsh",
+    "args": [
+      "-c",
+      "clojure-lsp"
     ],
-    "jedi.workspace.symbols.maxSymbols": 20,
-    "jedi.workspace.symbols.ignoreFolders": [
-        ".nox",
-        ".tox",
-        ".venv",
-        "__pycache__",
-        "venv"
+    "filetypes": [
+      "clojure"
     ],
-    "clojure-lsp": {
-        "command": "zsh",
-        "args": [
-            "-c",
-            "clojure-lsp"
-        ],
-        "filetypes": [
-            "clojure"
-        ],
-        "rootPatterns": [
-            "project.clj"
-        ],
-        "additionalSchemes": [
-            "jar",
-            "zipfile"
-        ],
-        "trace.server": "verbose",
-        "initializationOptions": {}
-    },
-    "explorer.previewAction.onHover": false,
-    "explorer.file.column.indent.indentLine": true,
-    "explorer.git.icon.status.mixed": "│",
-    "explorer.git.icon.status.untracked": "│",
-    "explorer.git.icon.status.unmerged": "│",
-    "explorer.git.icon.status.modified": "│",
-    "explorer.git.icon.status.added": "│",
-    "explorer.git.icon.status.deleted": "│",
-    "explorer.git.icon.status.renamed": "│",
-    "explorer.git.icon.status.ignored": "│",
-    "explorer.icon.readonly": "│",
-    "explorer.icon.hidden": "│",
-    "explorer.icon.link": "│",
-    "explorer.icon.selected": "│",
-    "explorer.icon.expanded": "│",
-    "explorer.icon.collapsed": "+",
-    "explorer.file.hiddenRules": {
-        "extensions": [
-            "o",
-            "a",
-            "obj",
-            "pyc",
-            "log",
-            "iml",
-            "jar",
-            "original",
-            "__pycache__",
-            "bak",
-            "dat",
-            "dir"
-        ],
-        "filenames": [
-            "target",
-            ".env",
-            "__pycache__",
-            "venv"
-        ],
-        "patternMatches": [
-            "^\\."
-        ]
-    },
-    "coc.preferences.rootPatterns": [
-        ".git",
-        ".env",
-        "src",
-        "tests"
+    "rootPatterns": [
+      "project.clj"
     ],
-    "explorer.buffer.root.template": "[icon & 1] OPEN",
-    "explorer.file.root.template": "[icon & 1] EXPLORER ([root])",
-    "explorer.keyMappings": {
-        "i": false,
-        "gk": "expandablePrev",
-        "gj": "expandableNext",
-        "*": "toggleSelection",
-        "<tab>": "actionMenu",
-        "h": "collapse",
-        "l": [
-            "expandable?",
-            "expand",
-            "open"
-        ],
-        "J": [
-            "toggleSelection",
-            "nodeNext"
-        ],
-        "K": [
-            "toggleSelection",
-            "nodePrev"
-        ],
-        "gl": "expandRecursive",
-        "gh": "collapseRecursive",
-        "<2-LeftMouse>": [
-            "expandable?",
-            [
-                "expanded?",
-                "collapse",
-                "expand"
-            ],
-            "open"
-        ],
-        "o": [
-            "expanded?",
-            "collapse",
-            "expand"
-        ],
-        "<cr>": [
-            "expandable?",
-            "cd",
-            "open"
-        ],
-        "e": "open",
-        "s": "open:split",
-        "S": "open:split:plain",
-        "E": "open:vsplit",
-        "t": "open:tab",
-        "<bs>": "gotoParent",
-        "gp": "preview:labeling",
-        "y": "copyFilepath",
-        "Y": "copyFilename",
-        "c": "copyFile",
-        "x": "cutFile",
-        "p": "pasteFile",
-        "d": "delete",
-        "D": "deleteForever",
-        "a": "addFile",
-        "A": "addDirectory",
-        "r": "rename",
-        ".": "toggleHidden",
-        "R": "refresh",
-        "?": "help",
-        "q": "quit",
-        "<esc>": "esc",
-        "X": "systemExecute",
-        "gd": "listDrive",
-        "f": "search",
-        "F": "searchRecursive",
-        "gf": "gotoSource:file",
-        "gb": "gotoSource:buffer",
-        "[[": "sourcePrev",
-        "]]": "sourceNext",
-        "[d": "diagnosticPrev",
-        "]d": "diagnosticNext",
-        "[c": "gitPrev",
-        "]c": "gitNext",
-        "<<": "gitStage",
-        ">>": "gitUnstage"
-    }
+    "additionalSchemes": [
+      "jar",
+      "zipfile"
+    ],
+    "trace.server": "verbose",
+    "initializationOptions": {}
+  },
+  "explorer.previewAction.onHover": false,
+  "explorer.file.column.indent.indentLine": true,
+  "explorer.git.icon.status.mixed": "│",
+  "explorer.git.icon.status.untracked": "│",
+  "explorer.git.icon.status.unmerged": "│",
+  "explorer.git.icon.status.modified": "│",
+  "explorer.git.icon.status.added": "│",
+  "explorer.git.icon.status.deleted": "│",
+  "explorer.git.icon.status.renamed": "│",
+  "explorer.git.icon.status.ignored": "│",
+  "explorer.icon.readonly": "│",
+  "explorer.icon.hidden": "│",
+  "explorer.icon.link": "│",
+  "explorer.icon.selected": "│",
+  "explorer.icon.expanded": "│",
+  "explorer.icon.collapsed": "+",
+  "explorer.file.hiddenRules": {
+    "extensions": [
+      "o",
+      "a",
+      "obj",
+      "pyc",
+      "log",
+      "iml",
+      "jar",
+      "original",
+      "__pycache__",
+      "bak",
+      "dat",
+      "dir"
+    ],
+    "filenames": [
+      "target",
+      ".env",
+      "__pycache__",
+      "venv"
+    ],
+    "patternMatches": [
+      "^\\."
+    ]
+  },
+  "coc.preferences.rootPatterns": [
+    ".git",
+    ".env",
+    "src",
+    "tests"
+  ],
+  "explorer.buffer.root.template": "[icon & 1] OPEN",
+  "explorer.file.root.template": "[icon & 1] EXPLORER ([root])",
+  "explorer.keyMappings": {
+    "i": false,
+    "gk": "expandablePrev",
+    "gj": "expandableNext",
+    "*": "toggleSelection",
+    "<tab>": "actionMenu",
+    "h": "collapse",
+    "l": [
+      "expandable?",
+      "expand",
+      "open"
+    ],
+    "J": [
+      "toggleSelection",
+      "nodeNext"
+    ],
+    "K": [
+      "toggleSelection",
+      "nodePrev"
+    ],
+    "gl": "expandRecursive",
+    "gh": "collapseRecursive",
+    "<2-LeftMouse>": [
+      "expandable?",
+      [
+        "expanded?",
+        "collapse",
+        "expand"
+      ],
+      "open"
+    ],
+    "o": [
+      "expanded?",
+      "collapse",
+      "expand"
+    ],
+    "<cr>": [
+      "expandable?",
+      "cd",
+      "open"
+    ],
+    "e": "open",
+    "s": "open:split",
+    "S": "open:split:plain",
+    "E": "open:vsplit",
+    "t": "open:tab",
+    "<bs>": "gotoParent",
+    "gp": "preview:labeling",
+    "y": "copyFilepath",
+    "Y": "copyFilename",
+    "c": "copyFile",
+    "x": "cutFile",
+    "p": "pasteFile",
+    "d": "delete",
+    "D": "deleteForever",
+    "a": "addFile",
+    "A": "addDirectory",
+    "r": "rename",
+    ".": "toggleHidden",
+    "R": "refresh",
+    "?": "help",
+    "q": "quit",
+    "<esc>": "esc",
+    "X": "systemExecute",
+    "gd": "listDrive",
+    "f": "search",
+    "F": "searchRecursive",
+    "gf": "gotoSource:file",
+    "gb": "gotoSource:buffer",
+    "[[": "sourcePrev",
+    "]]": "sourceNext",
+    "[d": "diagnosticPrev",
+    "]d": "diagnosticNext",
+    "[c": "gitPrev",
+    "]c": "gitNext",
+    "<<": "gitStage",
+    ">>": "gitUnstage"
+  }
 }
