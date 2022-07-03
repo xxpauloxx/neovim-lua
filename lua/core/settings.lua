@@ -2,6 +2,7 @@ local vim = vim
 
 vim.cmd [[set mouse=a]]
 vim.cmd [[syntax on]]
+vim.cmd [[set nowrap]]
 
 vim.b.coc_git_status = false
 
@@ -28,7 +29,6 @@ vim.g.coc_global_extensions = {
     'coc-htmldjango',
     'coc-format-json',
     'coc-vetur',
-    'coc-terminal',
     'coc-svelte',
     'coc-sql',
     'coc-prettier',

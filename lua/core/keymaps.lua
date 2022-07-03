@@ -6,7 +6,5 @@ vim.api.nvim_set_keymap("n", "fx", "<Plug>(coc-fix-current)", { silent = true })
 vim.api.nvim_set_keymap("n", "rf", "<Plug>(coc-refactor)", { silent = true })
 vim.api.nvim_set_keymap("n", "rn", "<Plug>(coc-rename)", {})
 vim.api.nvim_set_keymap("n", "rm", ":call CocActionAsync('doHover')<CR>", { silent = true, noremap = true })
-
 vim.api.nvim_set_keymap("n", "<C-e>", ":CocCommand explorer --width 25<CR>", { silent = true })
-vim.api.nvim_set_keymap("n", "<C-s>", ":TagbarToggle<CR>", { silent = true })
-vim.api.nvim_set_keymap("n", "<C-t>", ":CocCommand terminal.Toggle<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "<C-t>", ":TagbarToggle<CR>", { silent = true })
