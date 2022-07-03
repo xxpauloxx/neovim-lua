@@ -1,6 +1,7 @@
 local vim = vim
 
 vim.cmd [[set mouse=a]]
+vim.cmd [[syntax on]]
 
 vim.b.coc_git_status = false
 
@@ -24,7 +25,8 @@ vim.g.coc_global_extensions = {
     'coc-yaml',
     'coc-xml',
     'coc-webpack',
-    'coc-vimlsp',
+    'coc-htmldjango',
+    'coc-format-json',
     'coc-vetur',
     'coc-terminal',
     'coc-svelte',
@@ -50,15 +52,23 @@ vim.o.smartcase = true
 vim.o.termguicolors = true
 vim.o.background = "dark"
 vim.o.syntax = true
+vim.o.expandtab = true
 
 vim.opt.list = true
-vim.opt.listchars:append("space:⋅")
+vim.opt.listchars:append("space:.")
 vim.opt.listchars:append("eol:↴")
+vim.opt.listchars:append("tab:→→")
+vim.opt.listchars:append("trail:.")
 vim.opt.ruler = true
 vim.opt.encoding = "utf-8"
 vim.opt.expandtab = true
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
+vim.opt.autoindent = true
+vim.opt.smarttab = true
+vim.opt.softtabstop = 4
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 
 vim.wo.colorcolumn = "80"
 vim.wo.relativenumber = true

@@ -1,8 +1,8 @@
-local fn = vim.fn
-local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+local vim = vim
+local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({
+if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+  packer_bootstrap = vim.fn.system({
     'git',
     'clone',
     '--depth',
@@ -25,12 +25,11 @@ if not status_ok then
   return
 end
 
-return packer.startup(function()
+return packer.startup(function(use)
 
   use 'wbthomason/packer.nvim'
   use "preservim/tagbar"
   use "jiangmiao/auto-pairs"
-  use "ayu-theme/ayu-vim"
   use "sbdchd/vim-run"
   use "sheerun/vim-polyglot"
   use "lukas-reineke/indent-blankline.nvim"
@@ -43,9 +42,12 @@ return packer.startup(function()
     end
   }
   use {"neoclide/coc.nvim", branch = "release", as = "coc"}
-  use "arzg/vim-colors-xcode"
   use "sbdchd/neoformat"
   use "mileszs/ack.vim"
+  use "brooth/far.vim"
+
+  use "arzg/vim-colors-xcode"
+  use "ayu-theme/ayu-vim"
 
   if packer_bootstrap then
     require("packer").sync()
