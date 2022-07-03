@@ -49,6 +49,8 @@ return packer.startup(function(use)
       })
     end
   })
+  use "kkoomen/vim-doge"
+  use "editorconfig/editorconfig-vim"
 
   if packer_bootstrap then
     require("packer").sync()
