@@ -6,6 +6,26 @@
     "suggest.labelMaxLength": 50,
     "suggest.removeDuplicateItems": true,
     "list.maxPreviewHeight": 50,
+    "diagnostic.errorSign": {
+        "type": "string",
+        "description": "Text of error sign",
+        "default": "│"
+      },
+      "diagnostic.warningSign": {
+        "type": "string",
+        "description": "Text of warning sign",
+        "default": "│"
+      },
+      "diagnostic.infoSign": {
+        "type": "string",
+        "description": "Text of info sign",
+        "default": "│"
+      },
+      "diagnostic.hintSign": {
+        "type": "string",
+        "description": "Text of hint sign",
+        "default": "│"
+      },
     "javascript.suggest.autoImports": true,
     "java.import.gradle.enabled": true,
     "java.import.maven.enabled": true,
@@ -33,7 +53,7 @@
     "jedi.codeAction.nameExtractFunction": "jls_extract_def",
     "jedi.codeAction.nameExtractVariable": "jls_extract_var",
     "jedi.completion.disableSnippets": false,
-    "jedi.completion.resolveEagerly": false,
+    "jedi.completion.resolveEagerly": true,
     "jedi.diagnostics.enable": true,
     "jedi.diagnostics.didOpen": true,
     "jedi.diagnostics.didChange": true,
@@ -74,6 +94,20 @@
     },
     "explorer.previewAction.onHover": false,
     "explorer.file.column.indent.indentLine": true,
+    "explorer.git.icon.status.mixed": "│",
+    "explorer.git.icon.status.untracked": "│",
+    "explorer.git.icon.status.unmerged": "│",
+    "explorer.git.icon.status.modified": "│",
+    "explorer.git.icon.status.added": "│",
+    "explorer.git.icon.status.deleted": "│",
+    "explorer.git.icon.status.renamed": "│",
+    "explorer.git.icon.status.ignored": "│",
+    "explorer.icon.readonly": "│",
+    "explorer.icon.hidden": "│",
+    "explorer.icon.link": "│",
+    "explorer.icon.selected": "│",
+    "explorer.icon.expanded": "│",
+    "explorer.icon.collapsed": "+",
     "explorer.file.hiddenRules": {
         "extensions": [
             "o",
@@ -105,6 +139,8 @@
         "src",
         "tests"
     ],
+    "explorer.buffer.root.template": "[icon & 1] OPEN",
+    "explorer.file.root.template": "[icon & 1] EXPLORER ([root])",
     "explorer.keyMappings": {
         "i": false,
         "gk": "expandablePrev",
