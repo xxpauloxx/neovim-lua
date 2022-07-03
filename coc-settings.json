@@ -6,26 +6,10 @@
   "suggest.labelMaxLength": 50,
   "suggest.removeDuplicateItems": true,
   "list.maxPreviewHeight": 50,
-  "diagnostic.errorSign": {
-    "type": "string",
-    "description": "Text of error sign",
-    "default": "│"
-  },
-  "diagnostic.warningSign": {
-    "type": "string",
-    "description": "Text of warning sign",
-    "default": "│"
-  },
-  "diagnostic.infoSign": {
-    "type": "string",
-    "description": "Text of info sign",
-    "default": "│"
-  },
-  "diagnostic.hintSign": {
-    "type": "string",
-    "description": "Text of hint sign",
-    "default": "│"
-  },
+  "diagnostic.errorSign": "•",
+  "diagnostic.warningSign": "│",
+  "diagnostic.infoSign": "│",
+  "diagnostic.hintSign": "│",
   "javascript.suggest.autoImports": true,
   "java.import.gradle.enabled": true,
   "java.import.maven.enabled": true,

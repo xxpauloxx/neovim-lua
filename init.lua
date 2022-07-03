@@ -1,5 +1,4 @@
 require("packer_init")
-require("core/color")
 require("core/settings")
 require("core/keymaps")
 require("plugins/indent_blankline")

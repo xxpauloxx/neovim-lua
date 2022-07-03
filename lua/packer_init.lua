@@ -36,22 +36,21 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "vim-airline/vim-airline"
   use "vim-airline/vim-airline-themes"
-  use {
-    "lewis6991/gitsigns.nvim",
-    config = function()
-      require('gitsigns').setup()
-    end
-  }
+  use "lewis6991/gitsigns.nvim"
   use {"neoclide/coc.nvim", branch = "release", as = "coc"}
   use "sbdchd/neoformat"
   use "mileszs/ack.vim"
   use "brooth/far.vim"
-
-  use "arzg/vim-colors-xcode"
-  use "ayu-theme/ayu-vim"
+  use({
+    'projekt0n/github-nvim-theme',
+    config = function()
+      require('github-theme').setup({
+        theme_style = "dimmed"
+      })
+    end
+  })
 
   if packer_bootstrap then
     require("packer").sync()
   end
-
 end)
