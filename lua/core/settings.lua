@@ -25,6 +25,7 @@ vim.g.coc_global_extensions = {
     'coc-json',
     'coc-yaml',
     'coc-xml',
+    'coc-lua',
     'coc-webpack',
     'coc-htmldjango',
     'coc-format-json',

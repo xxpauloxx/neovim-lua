@@ -27,6 +27,22 @@
   "java.completion.guessMethodArguments": true,
   "java.format.onType.enabled": true,
   "java.codeGeneration.useBlocks": true,
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    },
+    "lua": {
+      "command": "~/.vscode/extensions/sumneko.lua-2.3.7/server/bin/macOS/lua-language-server",
+      "args": ["-E", "~/.vscode/extensions/sumneko.lua-2.3.7/server/main.lua"],
+      "rootPatterns": [".git"],
+      "filetypes": ["lua"]
+    }
+  },
   "clojure-lsp": {
     "command": "zsh",
     "args": [
