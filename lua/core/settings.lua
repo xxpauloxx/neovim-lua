@@ -20,7 +20,7 @@ vim.g.coc_global_extensions = {
     'coc-highlight',
     'coc-java',
     'coc-java-lombok',
-    'coc-jedi',
+    'coc-pyright',
     'coc-jest',
     'coc-json',
     'coc-yaml',
