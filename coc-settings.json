@@ -120,8 +120,8 @@
     "src",
     "tests"
   ],
-  "explorer.buffer.root.template": "[icon & 1] OPEN",
-  "explorer.file.root.template": "[icon & 1] EXPLORER ([root])",
+  "explorer.buffer.root.template": "[hidden]",
+  "explorer.file.root.template": "[icon & 1]PROJECT([root])",
   "explorer.keyMappings": {
     "i": false,
     "gk": "expandablePrev",
