@@ -27,15 +27,16 @@ if not status_ok then
 end
 
 return packer.startup(function(use)
-
-  use 'wbthomason/packer.nvim'
+  use "wbthomason/packer.nvim"
+  use "stevearc/vim-arduino"
+  use "vim-airline/vim-airline"
+  use "vim-airline/vim-airline-themes"
   use "preservim/tagbar"
   use "jiangmiao/auto-pairs"
   use "sbdchd/vim-run"
   use "sheerun/vim-polyglot"
+  use "skanehira/gh.vim"
   use "lukas-reineke/indent-blankline.nvim"
-  use "vim-airline/vim-airline"
-  use "vim-airline/vim-airline-themes"
   use "lewis6991/gitsigns.nvim"
   use {"neoclide/coc.nvim", branch = "release", as = "coc"}
   use "sbdchd/neoformat"
@@ -50,7 +51,10 @@ return packer.startup(function(use)
     end
   })
   use "kkoomen/vim-doge"
+  use "RRethy/vim-illuminate"
   use "editorconfig/editorconfig-vim"
+  use "akhaku/vim-java-unused-imports"
+  use "gilsondev/searchtasks.vim"
 
   if packer_bootstrap then
     require("packer").sync()

@@ -1,7 +1,7 @@
 {
   "coc.preferences.hoverTarget": "float",
-  "suggest.floatEnable": true,
   "suggest.maxPreviewWidth": 50,
+  "suggest.floatEnable": true,
   "suggest.enablePreview": true,
   "suggest.labelMaxLength": 50,
   "suggest.removeDuplicateItems": true,
@@ -30,37 +30,48 @@
   "languageserver": {
     "golang": {
       "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"],
+      "rootPatterns": [
+        "go.mod",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": [
+        "go"
+      ],
       "initializationOptions": {
         "usePlaceholders": true
       }
     },
     "lua": {
-      "command": "~/.vscode/extensions/sumneko.lua-2.3.7/server/bin/macOS/lua-language-server",
-      "args": ["-E", "~/.vscode/extensions/sumneko.lua-2.3.7/server/main.lua"],
-      "rootPatterns": [".git"],
-      "filetypes": ["lua"]
+      "command": "lua-language-server",
+      "args": [],
+      "rootPatterns": [
+        ".git"
+      ],
+      "filetypes": [
+        "lua"
+      ]
+    },
+    "clojure-lsp": {
+      "command": "zsh",
+      "args": [
+        "-c",
+        "clojure-lsp"
+      ],
+      "filetypes": [
+        "clojure"
+      ],
+      "rootPatterns": [
+        "project.clj"
+      ],
+      "additionalSchemes": [
+        "jar",
+        "zipfile"
+      ],
+      "trace.server": "verbose",
+      "initializationOptions": {}
     }
-  },
-  "clojure-lsp": {
-    "command": "zsh",
-    "args": [
-      "-c",
-      "clojure-lsp"
-    ],
-    "filetypes": [
-      "clojure"
-    ],
-    "rootPatterns": [
-      "project.clj"
-    ],
-    "additionalSchemes": [
-      "jar",
-      "zipfile"
-    ],
-    "trace.server": "verbose",
-    "initializationOptions": {}
   },
   "explorer.previewAction.onHover": false,
   "explorer.file.column.indent.indentLine": true,
