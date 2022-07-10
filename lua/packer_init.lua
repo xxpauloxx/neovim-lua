@@ -1,17 +1,17 @@
 local vim = vim
-local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+local install_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   packer_bootstrap = vim.fn.system({
-    'git',
-    'clone',
-    '--depth',
+    "git",
+    "clone",
+    "--depth",
 
-    '1',
-    'https://github.com/wbthomason/packer.nvim',
+    "1",
+    "https://github.com/wbthomason/packer.nvim",
     install_path
   })
-  vim.o.runtimepath = vim.fn.stdpath('data') .. '/site/pack/*/start/*,' .. vim.o.runtimepath
+  vim.o.runtimepath = vim.fn.stdpath("data") .. "/site/pack/*/start/*," .. vim.o.runtimepath
 end
 
 vim.cmd [[
@@ -21,7 +21,7 @@ vim.cmd [[
   augroup end
 ]]
 
-local status_ok, packer = pcall(require, 'packer')
+local status_ok, packer = pcall(require, "packer")
 if not status_ok then
   return
 end
@@ -43,10 +43,10 @@ return packer.startup(function(use)
   use "mileszs/ack.vim"
   use "brooth/far.vim"
   use({
-    'projekt0n/github-nvim-theme',
+    "projekt0n/github-nvim-theme",
     config = function()
-      require('github-theme').setup({
-        theme_style = "dimmed"
+      require("github-theme").setup({
+        theme_style = "dark"
       })
     end
   })
