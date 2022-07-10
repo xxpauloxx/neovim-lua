@@ -27,20 +27,25 @@ if not status_ok then
 end
 
 return packer.startup(function(use)
+  -- :PackerInstall or :PackerSync
   use "wbthomason/packer.nvim"
   use "stevearc/vim-arduino"
   use "vim-airline/vim-airline"
   use "vim-airline/vim-airline-themes"
   use "preservim/tagbar"
   use "jiangmiao/auto-pairs"
+  -- :Run
   use "sbdchd/vim-run"
   use "sheerun/vim-polyglot"
-  use "skanehira/gh.vim"
   use "lukas-reineke/indent-blankline.nvim"
   use "lewis6991/gitsigns.nvim"
   use {"neoclide/coc.nvim", branch = "release", as = "coc"}
+  -- :Neoformat <lang>
   use "sbdchd/neoformat"
+  -- :Ack 'word'
   use "mileszs/ack.vim"
+  -- :Far far boo or :Far far boo **/*.ext
+  -- :Fardo
   use "brooth/far.vim"
   use({
     "projekt0n/github-nvim-theme",
@@ -50,10 +55,14 @@ return packer.startup(function(use)
       })
     end
   })
+  -- :call doge#install()
+  -- :DogeGenerate
   use "kkoomen/vim-doge"
   use "RRethy/vim-illuminate"
   use "editorconfig/editorconfig-vim"
+  -- :UnusedImports
   use "akhaku/vim-java-unused-imports"
+  -- :SearchTasks
   use "gilsondev/searchtasks.vim"
 
   if packer_bootstrap then
