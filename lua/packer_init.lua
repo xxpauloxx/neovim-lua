@@ -64,6 +64,7 @@ return packer.startup(function(use)
   use "akhaku/vim-java-unused-imports"
   -- :SearchTasks
   use "gilsondev/searchtasks.vim"
+  use "tpope/vim-fugitive"
 
   if packer_bootstrap then
     require("packer").sync()
