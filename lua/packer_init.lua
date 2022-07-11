@@ -65,6 +65,28 @@ return packer.startup(function(use)
   -- :SearchTasks
   use "gilsondev/searchtasks.vim"
   use "tpope/vim-fugitive"
+  use {
+    "folke/twilight.nvim",
+    config = function()
+      require("twilight").setup {
+        dimming = {
+          alpha = 0.25,
+          color = { "Normal", "#ffffff" },
+          inactive = false, 
+        },
+        context = 1, 
+        treesitter = false, 
+        expand = { -- for treesitter, we we always try to expand to the top-most ancestor with these types
+          "function",
+          "method",
+          "table",
+          "if_statement",
+          "class"
+        },
+        exclude = {}, -- exclude these filetypes
+      }
+    end
+  }
 
   if packer_bootstrap then
     require("packer").sync()
