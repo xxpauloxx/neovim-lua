@@ -76,15 +76,22 @@ return packer.startup(function(use)
         },
         context = 1, 
         treesitter = false, 
-        expand = { -- for treesitter, we we always try to expand to the top-most ancestor with these types
+        expand = {
           "function",
           "method",
           "table",
           "if_statement",
           "class"
         },
-        exclude = {}, -- exclude these filetypes
+        exclude = {},
       }
+    end
+  }
+  -- :CommentToggle
+  use {
+    "terrortylor/nvim-comment",
+    config = function()
+      require('nvim_comment').setup()
     end
   }
 

@@ -8,3 +8,5 @@ vim.api.nvim_set_keymap("n", "rn", "<Plug>(coc-rename)", {})
 vim.api.nvim_set_keymap("n", "rm", ":call CocActionAsync('doHover')<CR>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "<C-e>", ":CocCommand explorer --width 35<CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "<C-t>", ":TagbarToggle<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "<C-c>", ":CommentToggle<CR>", { silent = true })
+
