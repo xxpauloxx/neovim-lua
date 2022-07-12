@@ -6,7 +6,6 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     "git",
     "clone",
     "--depth",
-
     "1",
     "https://github.com/wbthomason/packer.nvim",
     install_path
@@ -51,7 +50,7 @@ return packer.startup(function(use)
     "projekt0n/github-nvim-theme",
     config = function()
       require("github-theme").setup({
-        theme_style = "dark",
+        theme_style = "dimmed",
         dark_float = true,
       })
     end

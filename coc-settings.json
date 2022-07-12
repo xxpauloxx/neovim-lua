@@ -6,6 +6,8 @@
   "suggest.labelMaxLength": 50,
   "suggest.removeDuplicateItems": true,
   "list.maxPreviewHeight": 40,
+  "diagnostic.level": "hint",
+  "diagnostic.signLevel": "hint",
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
   "diagnostic.infoSign": "•",
@@ -125,7 +127,7 @@
   ],
   "explorer.buffer.root.template": "  OPEN: ([title])",
   "explorer.file.root.template": "  PROJECT: ([root])",
-  "explorer.width": 40,
+  "explorer.width": 30,
   "explorer.keyMappings": {
     "i": false,
     "gk": "expandablePrev",
