@@ -51,7 +51,8 @@ return packer.startup(function(use)
     "projekt0n/github-nvim-theme",
     config = function()
       require("github-theme").setup({
-        theme_style = "dark"
+        theme_style = "dark",
+        dark_float = true,
       })
     end
   })
