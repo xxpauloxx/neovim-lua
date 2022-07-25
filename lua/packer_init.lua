@@ -51,7 +51,7 @@ return packer.startup(function(use)
     config = function()
       require("github-theme").setup({
         theme_style = "dark",
-        dark_float = true
+        dark_float = true,
       })
     end
   })
