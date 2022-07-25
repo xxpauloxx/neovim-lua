@@ -50,8 +50,8 @@ return packer.startup(function(use)
     "projekt0n/github-nvim-theme",
     config = function()
       require("github-theme").setup({
-        theme_style = "dimmed",
-        dark_float = true,
+        theme_style = "dark",
+        dark_float = true
       })
     end
   })
@@ -94,6 +94,7 @@ return packer.startup(function(use)
       require('nvim_comment').setup()
     end
   }
+  use "davidgranstrom/nvim-markdown-preview"
 
   if packer_bootstrap then
     require("packer").sync()
