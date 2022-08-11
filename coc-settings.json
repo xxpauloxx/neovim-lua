@@ -92,7 +92,7 @@
   "explorer.icon.link": "•",
   "explorer.icon.selected": "┃",
   "explorer.icon.expanded": "┃",
-  "explorer.icon.collapsed": "+",
+  "explorer.icon.collapsed": "↳",
   "explorer.file.hiddenRules": {
     "extensions": [
       "o",
@@ -125,8 +125,8 @@
     "src",
     "tests"
   ],
-  "explorer.buffer.root.template": "  OPEN: ([title])",
-  "explorer.file.root.template": "  PROJECT: ([root])",
+  "explorer.buffer.root.template": "  ■ [title]",
+  "explorer.file.root.template": "  ■ [root]",
   "explorer.width": 35,
   "explorer.keyMappings": {
     "i": false,
