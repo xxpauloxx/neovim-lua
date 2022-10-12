@@ -3,6 +3,7 @@ local vim = vim
 vim.cmd [[set mouse=a]]
 vim.cmd [[syntax on]]
 vim.cmd [[set nowrap]]
+vim.cmd [[colorscheme ayu-mirage]]
 
 vim.b.coc_git_status = false
 

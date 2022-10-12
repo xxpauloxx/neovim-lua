@@ -10,7 +10,7 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     "https://github.com/wbthomason/packer.nvim",
     install_path
   })
-  vim.o.runtimepath = vim.fn.stdpath("data") .. "/site/pack/*/start/*," .. vim.o.runtimepath
+  vim.o.runtimepath = vim.fn.stdpath("data") .. "/site/pack/*/start/*," .. vim.o.runtimepathck 
 end
 
 vim.cmd [[
@@ -46,12 +46,12 @@ return packer.startup(function(use)
   -- :Far far boo or :Far far boo **/*.ext
   -- :Fardo
   use "brooth/far.vim"
-  use({
-    "projekt0n/github-nvim-theme",
+  use ({
+    "Shatur/neovim-ayu",
     config = function()
-      require("github-theme").setup({
-        theme_style = "dark",
-        dark_float = true,
+      require('ayu').setup({
+         mirage = true,
+         overrides = {},
       })
     end
   })
