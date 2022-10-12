@@ -5,4 +5,7 @@ require("core/keymaps")
 
 require("plugins/indent_blankline")
 require("plugins/gitsigns")
-
+require("plugins/twilight")
+require("plugins/nvim-comment")
+require("plugins/github-theme")
+require("plugins/illuminate")

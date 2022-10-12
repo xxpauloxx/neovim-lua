@@ -33,67 +33,43 @@ return packer.startup(function(use)
   use "vim-airline/vim-airline-themes"
   use "preservim/tagbar"
   use "jiangmiao/auto-pairs"
+  use "projekt0n/github-nvim-theme"
+
   -- :Run
   use "sbdchd/vim-run"
   use "sheerun/vim-polyglot"
   use "lukas-reineke/indent-blankline.nvim"
   use "lewis6991/gitsigns.nvim"
   use {"neoclide/coc.nvim", branch = "release", as = "coc"}
+
   -- :Neoformat <lang>
   use "sbdchd/neoformat"
+
   -- :Ack 'word'
   use "mileszs/ack.vim"
+
   -- :Far far boo or :Far far boo **/*.ext
   -- :Fardo
   use "brooth/far.vim"
-  use ({
-    "Shatur/neovim-ayu",
-    config = function()
-      require('ayu').setup({
-         mirage = true,
-         overrides = {},
-      })
-    end
-  })
+
   -- :call doge#install()
   -- :DogeGenerate
   use "kkoomen/vim-doge"
   use "RRethy/vim-illuminate"
   use "editorconfig/editorconfig-vim"
+
   -- :UnusedImports
   use "akhaku/vim-java-unused-imports"
+  
   -- :SearchTasks
   use "gilsondev/searchtasks.vim"
   use "tpope/vim-fugitive"
-  use {
-    "folke/twilight.nvim",
-    config = function()
-      require("twilight").setup {
-        dimming = {
-          alpha = 0.25,
-          color = { "Normal", "#ffffff" },
-          inactive = false, 
-        },
-        context = 1, 
-        treesitter = false, 
-        expand = {
-          "function",
-          "method",
-          "table",
-          "if_statement",
-          "class"
-        },
-        exclude = {},
-      }
-    end
-  }
+  use "folke/twilight.nvim"
+
   -- :CommentToggle
-  use {
-    "terrortylor/nvim-comment",
-    config = function()
-      require('nvim_comment').setup()
-    end
-  }
+  use "terrortylor/nvim-comment"
+
+  -- :MarkdownPreview
   use "davidgranstrom/nvim-markdown-preview"
 
   if packer_bootstrap then
