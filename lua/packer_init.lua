@@ -32,8 +32,6 @@ return packer.startup(function(use)
   use "vim-airline/vim-airline"
   use "vim-airline/vim-airline-themes"
   use "preservim/tagbar"
-  use "jiangmiao/auto-pairs"
-  use "projekt0n/github-nvim-theme"
 
   -- :Run
   use "sbdchd/vim-run"
@@ -60,11 +58,12 @@ return packer.startup(function(use)
 
   -- :UnusedImports
   use "akhaku/vim-java-unused-imports"
-  
+
   -- :SearchTasks
   use "gilsondev/searchtasks.vim"
   use "tpope/vim-fugitive"
   use "folke/twilight.nvim"
+  use "Shatur/neovim-ayu"
 
   -- :CommentToggle
   use "terrortylor/nvim-comment"

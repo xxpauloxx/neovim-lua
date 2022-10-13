@@ -3,6 +3,8 @@ local vim = vim
 vim.cmd [[set mouse=a]]
 vim.cmd [[syntax on]]
 vim.cmd [[set nowrap]]
+vim.cmd [[inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]]
+vim.cmd [[colorscheme ayu-mirage]]
 
 vim.b.coc_git_status = false
 
@@ -42,7 +44,8 @@ vim.g.coc_global_extensions = {
     "coc-clangd",
     "coc-marketplace",
     "coc-explorer",
-    "coc-rls"
+    "coc-rls",
+    "coc-pairs"
 }
 
 vim.o.hidden = true
