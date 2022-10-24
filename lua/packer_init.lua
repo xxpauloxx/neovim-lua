@@ -39,6 +39,7 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "lewis6991/gitsigns.nvim"
   use {"neoclide/coc.nvim", branch = "release", as = "coc"}
+  use "ayu-theme/ayu-vim-airline"
 
   -- :Neoformat <lang>
   use "sbdchd/neoformat"

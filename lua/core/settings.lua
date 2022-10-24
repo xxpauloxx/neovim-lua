@@ -13,7 +13,7 @@ if vim.fn.executable("ag") then
 end
 
 vim.g.mapleader = " "
-vim.g.airline_theme = "minimalist"
+vim.g.airline_theme = "ayu_mirage"
 vim.g.coc_global_extensions = {
     "coc-cmake",
     "coc-docker",
