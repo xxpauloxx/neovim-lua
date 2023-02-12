@@ -32,6 +32,7 @@ return packer.startup(function(use)
   use "vim-airline/vim-airline"
   use "vim-airline/vim-airline-themes"
   use "preservim/tagbar"
+  use "mattn/webapi-vim"
 
   -- :Run
   use "sbdchd/vim-run"

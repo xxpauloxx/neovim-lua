@@ -45,7 +45,8 @@ vim.g.coc_global_extensions = {
     "coc-marketplace",
     "coc-explorer",
     "coc-rls",
-    "coc-pairs"
+    "coc-pairs",
+    "coc-rust-analyzer"
 }
 
 vim.o.hidden = true

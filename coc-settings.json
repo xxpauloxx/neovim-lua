@@ -93,6 +93,7 @@
   "explorer.icon.selected": "┃",
   "explorer.icon.expanded": "┃",
   "explorer.icon.collapsed": "○",
+  "explorer.file.reveal.whenOpen": true,
   "explorer.file.hiddenRules": {
     "extensions": [
       "o",
@@ -127,7 +128,7 @@
   ],
   "explorer.file.root.template": "[title] [root]",
   "explorer.buffer.root.template": "[title]",
-  "explorer.width": 35,
+  "explorer.width": 25,
   "explorer.keyMappings": {
     "i": false,
     "gk": "expandablePrev",
