@@ -4,7 +4,7 @@ vim.cmd [[set mouse=a]]
 vim.cmd [[syntax on]]
 vim.cmd [[set nowrap]]
 vim.cmd [[inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]]
-vim.cmd [[colorscheme ayu-mirage]]
+vim.cmd [[colorscheme ayu-dark]]
 
 vim.b.coc_git_status = false
 
@@ -13,7 +13,7 @@ if vim.fn.executable("ag") then
 end
 
 vim.g.mapleader = " "
-vim.g.airline_theme = "ayu_mirage"
+vim.g.airline_theme = "ayu_dark"
 vim.g.coc_global_extensions = {
     "coc-cmake",
     "coc-docker",

@@ -128,7 +128,7 @@
   ],
   "explorer.file.root.template": "[title] [root]",
   "explorer.buffer.root.template": "[title]",
-  "explorer.width": 25,
+  "explorer.width": 45,
   "explorer.keyMappings": {
     "i": false,
     "gk": "expandablePrev",
