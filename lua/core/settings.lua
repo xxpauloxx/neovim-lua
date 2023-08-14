@@ -4,16 +4,13 @@ vim.cmd [[set mouse=a]]
 vim.cmd [[syntax on]]
 vim.cmd [[set nowrap]]
 vim.cmd [[inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]]
-vim.cmd [[colorscheme ayu-dark]]
-
-vim.b.coc_git_status = false
+vim.cmd [[set termguicolors]]
 
 if vim.fn.executable("ag") then
     vim.g.ackprg = "ag --vimgrep"
 end
 
 vim.g.mapleader = " "
-vim.g.airline_theme = "ayu_dark"
 vim.g.coc_global_extensions = {
     "coc-cmake",
     "coc-docker",
@@ -44,9 +41,8 @@ vim.g.coc_global_extensions = {
     "coc-clangd",
     "coc-marketplace",
     "coc-explorer",
-    "coc-rls",
-    "coc-pairs",
-    "coc-rust-analyzer"
+    "coc-rust-analyzer",
+    "coc-pairs"
 }
 
 vim.o.hidden = true

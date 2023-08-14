@@ -1,210 +1,78 @@
 {
-  "coc.preferences.hoverTarget": "float",
-  "suggest.maxPreviewWidth": 50,
-  "suggest.floatEnable": true,
-  "suggest.enablePreview": true,
-  "suggest.labelMaxLength": 50,
-  "suggest.removeDuplicateItems": true,
-  "list.maxPreviewHeight": 40,
-  "diagnostic.level": "hint",
-  "diagnostic.signLevel": "hint",
-  "diagnostic.errorSign": "•",
-  "diagnostic.warningSign": "•",
-  "diagnostic.infoSign": "•",
-  "diagnostic.hintSign": "•",
-  "javascript.suggest.autoImports": true,
-  "java.import.gradle.enabled": true,
-  "java.import.maven.enabled": true,
-  "java.configuration.updateBuildConfiguration": "automatic",
-  "java.import.gradle.wrapper.enabled": true,
-  "java.autobuild.enabled": true,
-  "java.format.enabled": true,
-  "java.referencesCodeLens.enabled": true,
-  "java.signatureHelp.enabled": true,
-  "java.foldingRange.enabled": true,
-  "java.trace.server": "verbose",
-  "java.errors.incompleteClasspath.severity": "ignore",
-  "java.maven.downloadSources": true,
-  "java.format.comments.enabled": true,
-  "java.completion.guessMethodArguments": true,
-  "java.format.onType.enabled": true,
-  "java.codeGeneration.useBlocks": true,
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": [
-        "go.mod",
-        ".vim/",
-        ".git/",
-        ".hg/"
-      ],
-      "filetypes": [
-        "go"
-      ],
-      "initializationOptions": {
-        "usePlaceholders": true
+    "coc.preferences.hoverTarget": "float",
+    "suggest.maxPreviewWidth": 50,
+    "suggest.floatEnable": true,
+    "suggest.enablePreview": true,
+    "suggest.labelMaxLength": 50,
+    "suggest.removeDuplicateItems": true,
+    "list.maxPreviewHeight": 40,
+    "diagnostic.level": "hint",
+    "diagnostic.signLevel": "hint",
+    "diagnostic.errorSign": "•",
+    "diagnostic.warningSign": "•",
+    "diagnostic.infoSign": "•",
+    "diagnostic.hintSign": "•",
+    "javascript.suggest.autoImports": true,
+    "java.import.gradle.enabled": true,
+    "java.import.maven.enabled": true,
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.import.gradle.wrapper.enabled": true,
+    "java.autobuild.enabled": true,
+    "java.format.enabled": true,
+    "java.referencesCodeLens.enabled": true,
+    "java.signatureHelp.enabled": true,
+    "java.foldingRange.enabled": true,
+    "java.trace.server": "verbose",
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "java.maven.downloadSources": true,
+    "java.format.comments.enabled": true,
+    "java.completion.guessMethodArguments": true,
+    "java.format.onType.enabled": true,
+    "java.codeGeneration.useBlocks": true,
+    "languageserver": {
+      "golang": {
+        "command": "gopls",
+        "rootPatterns": [
+          "go.mod",
+          ".vim/",
+          ".git/",
+          ".hg/"
+        ],
+        "filetypes": [
+          "go"
+        ],
+        "initializationOptions": {
+          "usePlaceholders": true
+        }
+      },
+      "lua": {
+        "command": "lua-language-server",
+        "args": [],
+        "rootPatterns": [
+          ".git"
+        ],
+        "filetypes": [
+          "lua"
+        ]
+      },
+      "clojure-lsp": {
+        "command": "zsh",
+        "args": [
+          "-c",
+          "clojure-lsp"
+        ],
+        "filetypes": [
+          "clojure"
+        ],
+        "rootPatterns": [
+          "project.clj"
+        ],
+        "additionalSchemes": [
+          "jar",
+          "zipfile"
+        ],
+        "trace.server": "verbose",
+        "initializationOptions": {}
       }
-    },
-    "lua": {
-      "command": "lua-language-server",
-      "args": [],
-      "rootPatterns": [
-        ".git"
-      ],
-      "filetypes": [
-        "lua"
-      ]
-    },
-    "clojure-lsp": {
-      "command": "zsh",
-      "args": [
-        "-c",
-        "clojure-lsp"
-      ],
-      "filetypes": [
-        "clojure"
-      ],
-      "rootPatterns": [
-        "project.clj"
-      ],
-      "additionalSchemes": [
-        "jar",
-        "zipfile"
-      ],
-      "trace.server": "verbose",
-      "initializationOptions": {}
     }
-  },
-  "explorer.previewAction.onHover": false,
-  "explorer.file.column.indent.indentLine": true,
-  "explorer.icon.enableNerdfont": false,
-  "explorer.filename.colored.enable": true,
-  "explorer.git.icon.status.mixed": "•",
-  "explorer.git.icon.status.untracked": "•",
-  "explorer.git.icon.status.unmerged": "•",
-  "explorer.git.icon.status.modified": "•",
-  "explorer.git.icon.status.added": "•",
-  "explorer.git.icon.status.deleted": "•",
-  "explorer.git.icon.status.renamed": "•",
-  "explorer.git.icon.status.ignored": "•",
-  "explorer.icon.readonly": "•",
-  "explorer.icon.hidden": "•",
-  "explorer.icon.link": "•",
-  "explorer.icon.selected": "┃",
-  "explorer.icon.expanded": "┃",
-  "explorer.icon.collapsed": "○",
-  "explorer.file.reveal.whenOpen": true,
-  "explorer.file.hiddenRules": {
-    "extensions": [
-      "o",
-      "a",
-      "obj",
-      "pyc",
-      "log",
-      "iml",
-      "jar",
-      "original",
-      "__pycache__",
-      "bak",
-      "dat",
-      "dir"
-    ],
-    "filenames": [
-      "target",
-      ".env",
-      "__pycache__",
-      "venv",
-      "plugin"
-    ],
-    "patternMatches": [
-      "^\\."
-    ]
-  },
-  "coc.preferences.rootPatterns": [
-    ".git",
-    ".env",
-    "src",
-    "tests"
-  ],
-  "explorer.file.root.template": "[title] [root]",
-  "explorer.buffer.root.template": "[title]",
-  "explorer.width": 45,
-  "explorer.keyMappings": {
-    "i": false,
-    "gk": "expandablePrev",
-    "gj": "expandableNext",
-    "*": "toggleSelection",
-    "<tab>": "actionMenu",
-    "h": "collapse",
-    "l": [
-      "expandable?",
-      "expand",
-      "open"
-    ],
-    "J": [
-      "toggleSelection",
-      "nodeNext"
-    ],
-    "K": [
-      "toggleSelection",
-      "nodePrev"
-    ],
-    "gl": "expandRecursive",
-    "gh": "collapseRecursive",
-    "<2-LeftMouse>": [
-      "expandable?",
-      [
-        "expanded?",
-        "collapse",
-        "expand"
-      ],
-      "open"
-    ],
-    "o": [
-      "expanded?",
-      "collapse",
-      "expand"
-    ],
-    "<cr>": [
-      "expandable?",
-      "cd",
-      "open"
-    ],
-    "e": "open",
-    "s": "open:split",
-    "S": "open:split:plain",
-    "E": "open:vsplit",
-    "t": "open:tab",
-    "<bs>": "gotoParent",
-    "gp": "preview:labeling",
-    "y": "copyFilepath",
-    "Y": "copyFilename",
-    "c": "copyFile",
-    "x": "cutFile",
-    "p": "pasteFile",
-    "d": "delete",
-    "D": "deleteForever",
-    "a": "addFile",
-    "A": "addDirectory",
-    "r": "rename",
-    ".": "toggleHidden",
-    "R": "refresh",
-    "?": "help",
-    "q": "quit",
-    "<esc>": "esc",
-    "X": "systemExecute",
-    "gd": "listDrive",
-    "f": "search",
-    "F": "searchRecursive",
-    "gf": "gotoSource:file",
-    "gb": "gotoSource:buffer",
-    "[[": "sourcePrev",
-    "]]": "sourceNext",
-    "[d": "diagnosticPrev",
-    "]d": "diagnosticNext",
-    "[c": "gitPrev",
-    "]c": "gitNext",
-    "<<": "gitStage",
-    ">>": "gitUnstage"
-  }
 }
