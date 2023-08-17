@@ -44,7 +44,7 @@ require'barbar'.setup {
     -- Valid options to display the buffer index and -number are `true`, 'superscript' and 'subscript'
     buffer_index = false,
     buffer_number = false,
-    button = 'x',
+    button = '•',
     -- Enables / disables diagnostic symbols
     diagnostics = {
       [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
