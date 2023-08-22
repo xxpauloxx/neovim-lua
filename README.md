@@ -17,3 +17,5 @@ $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 Install vim-doge using `:call doge#install()`.
+
+Jetbrains Mono Nerd Font / 17 / SemiBold

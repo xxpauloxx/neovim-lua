@@ -19,6 +19,7 @@ require("nvim-tree").setup({
       width = 25,
       preserve_window_proportions = true,
     },
+
     git = {
       enable = true,
       ignore = true,
@@ -42,10 +43,10 @@ require("nvim-tree").setup({
   
       icons = {
         show = {
-          file = false,
-          folder = false,
+          file = true,
+          folder = true,
           folder_arrow = true,
-          git = false,
+          git = true,
         },
   
         glyphs = {

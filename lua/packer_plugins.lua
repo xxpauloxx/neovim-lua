@@ -10,7 +10,7 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     "https://github.com/wbthomason/packer.nvim",
     install_path
   })
-  vim.o.runtimepath = vim.fn.stdpath("data") .. "/site/pack/*/start/*," .. vim.o.runtimepathck
+  vim.o.runtimepath = vim.fn.stdpath("data") .. "/site/pack/*/start/*," .. vim.o.runtimepathck 
 end
 
 vim.cmd [[
@@ -47,9 +47,6 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim"
   use "romgrk/barbar.nvim"
   use "davidgranstrom/nvim-markdown-preview"
-
-  -- :UnusedImports
-  use "akhaku/vim-java-unused-imports"
 
   if packer_bootstrap then
     require("packer").sync()
