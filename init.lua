@@ -1,7 +1,7 @@
 require("packer_plugins")
 
 require("plugins/nvim-tree")
-require("plugins/neovim-ayu")
+require("plugins/catppuccin")
 require("plugins/nvim-web-devicons")
 require("plugins/lualine")
 

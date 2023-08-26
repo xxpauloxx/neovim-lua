@@ -44,7 +44,7 @@ require'barbar'.setup {
     -- Valid options to display the buffer index and -number are `true`, 'superscript' and 'subscript'
     buffer_index = false,
     buffer_number = false,
-    button = 'x',
+    button = '●',
     -- Enables / disables diagnostic symbols
     diagnostics = {
       [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
@@ -53,9 +53,9 @@ require'barbar'.setup {
       [vim.diagnostic.severity.HINT] = {enabled = true},
     },
     gitsigns = {
-      added = {enabled = true, icon = '+'},
-      changed = {enabled = true, icon = '~'},
-      deleted = {enabled = true, icon = '-'},
+      added = {enabled = false, icon = '+'},
+      changed = {enabled = false, icon = '~'},
+      deleted = {enabled = false, icon = '-'},
     },
     filetype = {
       -- Sets the icon's highlight group.

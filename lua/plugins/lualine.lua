@@ -1,7 +1,7 @@
 require('lualine').setup {
     options = {
       icons_enabled = false ,
-      theme = 'ayu_mirage',
+      theme = 'catppuccin-mocha',
       component_separators = { left = '', right = ''},
       section_separators = { left = '', right = ''},
       disabled_filetypes = {

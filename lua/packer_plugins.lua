@@ -29,7 +29,6 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim"
 
   use "nvim-tree/nvim-tree.lua"
-  use "Shatur/neovim-ayu"
   use "nvim-tree/nvim-web-devicons"
   use "sheerun/vim-polyglot"
   use "lukas-reineke/indent-blankline.nvim"
@@ -47,6 +46,9 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim"
   use "romgrk/barbar.nvim"
   use "davidgranstrom/nvim-markdown-preview"
+  use "akhaku/vim-java-unused-imports"
+  use "petobens/poet-v"
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   if packer_bootstrap then
     require("packer").sync()
