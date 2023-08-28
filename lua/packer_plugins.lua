@@ -41,14 +41,18 @@ return packer.startup(function(use)
   use "editorconfig/editorconfig-vim"
   use "brooth/far.vim"
   use "mileszs/ack.vim"
-  use "sbdchd/neoformat"
   use {"neoclide/coc.nvim", branch = "release", as = "coc"}
   use "nvim-lualine/lualine.nvim"
   use "romgrk/barbar.nvim"
   use "davidgranstrom/nvim-markdown-preview"
   use "akhaku/vim-java-unused-imports"
   use "petobens/poet-v"
-  use { "catppuccin/nvim", as = "catppuccin" }
+  use "google/vim-maktaba"
+  use "google/vim-codefmt"
+  use "nvim-lua/plenary.nvim"
+  use "nvim-treesitter/nvim-treesitter"
+  use "olexsmir/gopher.nvim"
+  use "catppuccin/nvim"
 
   if packer_bootstrap then
     require("packer").sync()

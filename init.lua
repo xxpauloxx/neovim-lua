@@ -9,6 +9,7 @@ require("plugins/indent_blankline")
 require("plugins/gitsigns")
 require("plugins/twilight")
 require("plugins/barbar")
+require("plugins/nvim-treesitter")
 
 require("core/settings")
 require("core/keymaps")
