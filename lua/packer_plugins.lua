@@ -10,7 +10,7 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     "https://github.com/wbthomason/packer.nvim",
     install_path
   })
-  vim.o.runtimepath = vim.fn.stdpath("data") .. "/site/pack/*/start/*," .. vim.o.runtimepathck 
+  vim.o.runtimepath = vim.fn.stdpath("data") .. "/site/pack/*/start/*," .. vim.o.runtimepathck
 end
 
 vim.cmd [[
@@ -43,16 +43,17 @@ return packer.startup(function(use)
   use "mileszs/ack.vim"
   use {"neoclide/coc.nvim", branch = "release", as = "coc"}
   use "nvim-lualine/lualine.nvim"
-  use "romgrk/barbar.nvim"
+  use "rebelot/kanagawa.nvim"
   use "davidgranstrom/nvim-markdown-preview"
   use "akhaku/vim-java-unused-imports"
   use "petobens/poet-v"
   use "google/vim-maktaba"
   use "google/vim-codefmt"
   use "nvim-lua/plenary.nvim"
-  use "nvim-treesitter/nvim-treesitter"
   use "olexsmir/gopher.nvim"
   use "catppuccin/nvim"
+  use "nyoom-engineering/nyoom.nvim"
+  use "Shatur/neovim-ayu"
 
   if packer_bootstrap then
     require("packer").sync()
