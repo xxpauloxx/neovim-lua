@@ -1,11 +1,5 @@
 local vim = vim
 
-vim.cmd [[set mouse=a]]
-vim.cmd [[syntax on]]
-vim.cmd [[set nowrap]]
-vim.cmd [[inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]]
-vim.cmd [[set termguicolors]]
-
 if vim.fn.executable("ag") then
     vim.g.ackprg = "ag --vimgrep"
 end
@@ -73,5 +67,14 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
 vim.wo.colorcolumn = "80"
-vim.wo.relativenumber = true
+vim.wo.relativenumber = false
 vim.wo.number = true
+
+vim.cmd [[set mouse=a]]
+vim.cmd [[syntax on]]
+vim.cmd [[set nowrap]]
+vim.cmd [[inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]]
+vim.cmd [[set termguicolors]]
+vim.cmd [[colorscheme ayu-dark]]
+
+vim.cmd [[hi VertSplit guifg=#222222 guibg=NONE]]

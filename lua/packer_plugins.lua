@@ -42,7 +42,10 @@ return packer.startup(function(use)
   use "brooth/far.vim"
   use "mileszs/ack.vim"
   use {"neoclide/coc.nvim", branch = "release", as = "coc"}
-  use "nvim-lualine/lualine.nvim"
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
   use "rebelot/kanagawa.nvim"
   use "davidgranstrom/nvim-markdown-preview"
   use "akhaku/vim-java-unused-imports"
@@ -51,7 +54,6 @@ return packer.startup(function(use)
   use "google/vim-codefmt"
   use "nvim-lua/plenary.nvim"
   use "olexsmir/gopher.nvim"
-  use "catppuccin/nvim"
   use "nyoom-engineering/nyoom.nvim"
   use "Shatur/neovim-ayu"
 
