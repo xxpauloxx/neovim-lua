@@ -77,4 +77,4 @@ vim.cmd [[inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "
 vim.cmd [[set termguicolors]]
 vim.cmd [[colorscheme ayu-dark]]
 
-vim.cmd [[hi VertSplit guifg=#222222 guibg=NONE]]
+vim.cmd [[hi VertSplit guifg=#333333 guibg=NONE]]
