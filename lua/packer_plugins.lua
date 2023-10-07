@@ -31,7 +31,7 @@ return packer.startup(function(use)
   use "nvim-tree/nvim-tree.lua"
   use "nvim-tree/nvim-web-devicons"
   use "sheerun/vim-polyglot"
-  use "lukas-reineke/indent-blankline.nvim"
+  use { "lukas-reineke/indent-blankline.nvim", main = "ibl" }
   use "lewis6991/gitsigns.nvim"
   use "sbdchd/vim-run"
   use "preservim/tagbar"
