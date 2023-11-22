@@ -8,6 +8,9 @@ require("plugins/indent_blankline")
 require("plugins/gitsigns")
 require("plugins/twilight")
 require("plugins/ayu")
+require("plugins/barbar")
 
 require("core/settings")
 require("core/keymaps")
+
+

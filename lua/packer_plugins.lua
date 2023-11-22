@@ -49,13 +49,16 @@ return packer.startup(function(use)
   use "rebelot/kanagawa.nvim"
   use "davidgranstrom/nvim-markdown-preview"
   use "akhaku/vim-java-unused-imports"
-  use "petobens/poet-v"
+  -- use "petobens/poet-v"
   use "google/vim-maktaba"
   use "google/vim-codefmt"
   use "nvim-lua/plenary.nvim"
   use "olexsmir/gopher.nvim"
   use "nyoom-engineering/nyoom.nvim"
   use "Shatur/neovim-ayu"
+  use "romgrk/barbar.nvim"
+  use "catppuccin/nvim"
+  use 'frenzyexists/aquarium-vim'
 
   if packer_bootstrap then
     require("packer").sync()

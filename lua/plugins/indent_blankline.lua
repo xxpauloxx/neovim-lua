@@ -1,4 +1,12 @@
+local highlight = {
+    "CursorColumn",
+    "Whitespace",
+}
+
 require("ibl").setup {
-    -- space_char_blankline = " ",
-    -- show_trailing_blankline_indent = true
+    indent = { highlight = highlight, char = "" },
+    whitespace = {
+        remove_blankline_trail = false,
+    },
+    scope = { enabled = false },
 }
