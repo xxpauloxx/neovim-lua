@@ -7,7 +7,7 @@ require("plugins/lualine")
 require("plugins/indent_blankline")
 require("plugins/gitsigns")
 require("plugins/twilight")
-require("plugins/ayu")
+require("plugins/catppuccin")
 require("plugins/barbar")
 
 require("core/settings")

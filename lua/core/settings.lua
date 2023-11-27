@@ -76,6 +76,5 @@ vim.cmd [[syntax on]]
 vim.cmd [[set nowrap]]
 vim.cmd [[inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]]
 vim.cmd [[set termguicolors]]
-vim.cmd [[colorscheme ayu-dark]]
 
 vim.cmd [[hi VertSplit guifg=#333333 guibg=NONE]]
