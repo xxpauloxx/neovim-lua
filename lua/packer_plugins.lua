@@ -42,14 +42,16 @@ return packer.startup(function(use)
   use "brooth/far.vim"
   use "mileszs/ack.vim"
   use {"neoclide/coc.nvim", branch = "release", as = "coc"}
+  
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+  
   use "rebelot/kanagawa.nvim"
   use "davidgranstrom/nvim-markdown-preview"
   use "akhaku/vim-java-unused-imports"
-  -- use "petobens/poet-v"
+
   use "google/vim-maktaba"
   use "google/vim-codefmt"
   use "nvim-lua/plenary.nvim"
@@ -58,7 +60,6 @@ return packer.startup(function(use)
   use "Shatur/neovim-ayu"
   use "romgrk/barbar.nvim"
   use "catppuccin/nvim"
-  use 'frenzyexists/aquarium-vim'
 
   if packer_bootstrap then
     require("packer").sync()

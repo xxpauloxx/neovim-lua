@@ -11,7 +11,18 @@ require("nvim-tree").setup({
     sync_root_with_cwd = true,
     update_focused_file = {
       enable = true,
-      update_root = false,
+      update_root = true,
+    },
+    diagnostics = {
+      enable = true,
+      show_on_dirs = true,
+      show_on_open_dirs=true,
+      icons = {
+        hint = "",
+        info = "",
+        warning = "",
+        error = "",
+      },
     },
     view = {
       adaptive_size = false,
@@ -34,13 +45,12 @@ require("nvim-tree").setup({
     },
     renderer = {
       root_folder_label = false,
-      highlight_git = false,
+      highlight_git = true,
       highlight_opened_files = "none",
-  
+      special_files={"README.md", "Makefile", "pyproject.toml", "go.mod"},
       indent_markers = {
         enable = true,
       },
-  
       icons = {
         show = {
           file = true,
@@ -63,13 +73,13 @@ require("nvim-tree").setup({
             arrow_closed = "",
           },
           git = {
-            unstaged = "",
-            staged = "",
-            unmerged = "",
-            renamed = "",
-            untracked = "",
-            deleted = "",
-            ignored = "",
+            unstaged = "•",
+            staged = "•",
+            unmerged = "•",
+            renamed = "•",
+            untracked = "•",
+            deleted = "•",
+            ignored = "•",
           },
         },
       },

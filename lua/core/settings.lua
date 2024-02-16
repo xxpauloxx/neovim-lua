@@ -37,7 +37,8 @@ vim.g.coc_global_extensions = {
     "coc-marketplace",
     "coc-explorer",
     "coc-rust-analyzer",
-    "coc-pairs"
+    "coc-pairs",
+    "coc-diagnostic"
 }
 
 vim.o.hidden = true
@@ -77,5 +78,5 @@ vim.cmd [[set nowrap]]
 vim.cmd [[inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]]
 vim.cmd [[set termguicolors]]
 
-vim.cmd [[colorscheme ayu-dark]]
+vim.cmd [[colorscheme catppuccin-mocha]]
 vim.cmd [[hi VertSplit guifg=#333333 guibg=NONE]]
