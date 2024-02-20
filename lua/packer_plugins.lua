@@ -48,7 +48,6 @@ return packer.startup(function(use)
   }
   use "davidgranstrom/nvim-markdown-preview"
   use "akhaku/vim-java-unused-imports"
-
   use "google/vim-maktaba"
   use "google/vim-codefmt"
   use "nvim-lua/plenary.nvim"

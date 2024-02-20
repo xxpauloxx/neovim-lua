@@ -10,5 +10,3 @@ require("plugins/twilight")
 
 require("core/settings")
 require("core/keymaps")
-
-vim.cmd [[colorscheme catppuccin-mocha]]
