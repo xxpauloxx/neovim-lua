@@ -1,6 +1,6 @@
 require("nvim-tree").setup({
     filters = {
-      dotfiles = true,
+      dotfiles = false,
       git_ignored = true,
       exclude = { vim.fn.stdpath "config" .. "/lua/custom" },
     },
@@ -11,7 +11,7 @@ require("nvim-tree").setup({
     sync_root_with_cwd = true,
     update_focused_file = {
       enable = true,
-      update_root = true,
+      update_root = false,
     },
     diagnostics = {
       enable = true,
@@ -44,7 +44,7 @@ require("nvim-tree").setup({
       },
     },
     renderer = {
-      root_folder_label = false,
+      root_folder_label = true,
       highlight_git = true,
       highlight_opened_files = "none",
       special_files={"README.md", "Makefile", "pyproject.toml", "go.mod"},
@@ -73,13 +73,13 @@ require("nvim-tree").setup({
             arrow_closed = "",
           },
           git = {
-            unstaged = "•",
-            staged = "•",
-            unmerged = "•",
-            renamed = "•",
-            untracked = "•",
-            deleted = "•",
-            ignored = "•",
+            unstaged = "",
+            staged = "",
+            unmerged = "",
+            renamed = "",
+            untracked = "",
+            deleted = "",
+            ignored = "",
           },
         },
       },
