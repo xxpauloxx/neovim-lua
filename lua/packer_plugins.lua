@@ -54,7 +54,7 @@ return packer.startup(function(use)
   use "olexsmir/gopher.nvim"
   use "romgrk/barbar.nvim"
   use "catppuccin/nvim"
-  use "terrortylor/nvim-comment"
+  use "numToStr/Comment.nvim"
   -- use "github/copilot.vim"
 
   if packer_bootstrap then
