@@ -44,7 +44,7 @@ require("nvim-tree").setup({
       },
     },
     renderer = {
-      root_folder_label = true,
+      root_folder_label = false,
       highlight_git = true,
       highlight_opened_files = "none",
       special_files={"README.md", "Makefile", "pyproject.toml", "go.mod"},
