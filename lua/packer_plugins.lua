@@ -41,11 +41,21 @@ return packer.startup(function(use)
   use "editorconfig/editorconfig-vim"
   use "brooth/far.vim"
   use "mileszs/ack.vim"
-  use {"neoclide/coc.nvim", branch = "release", as = "coc"}
+
+  use "neovim/nvim-lspconfig"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-cmdline"
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-vsnip"
+  use "hrsh7th/vim-vsnip"
+
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+
   use "davidgranstrom/nvim-markdown-preview"
   use "akhaku/vim-java-unused-imports"
   use "google/vim-maktaba"
@@ -55,6 +65,9 @@ return packer.startup(function(use)
   use "romgrk/barbar.nvim"
   use "catppuccin/nvim"
   use "numToStr/Comment.nvim"
+  use "windwp/nvim-autopairs"
+  -- use "nvimdev/lspsaga.nvim"
+
   -- use "github/copilot.vim"
 
   if packer_bootstrap then
