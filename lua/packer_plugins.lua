@@ -66,7 +66,8 @@ return packer.startup(function(use)
   use "catppuccin/nvim"
   use "numToStr/Comment.nvim"
   use "windwp/nvim-autopairs"
-  -- use "nvimdev/lspsaga.nvim"
+  use "folke/todo-comments.nvim"
+  use "nvimdev/lspsaga.nvim"
 
   -- use "github/copilot.vim"
 

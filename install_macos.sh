@@ -9,6 +9,8 @@ brew install typescript-language-server
 brew install jdtls
 brew install rust
 brew install rust-analyzer
+brew install rg
+brew install dockerfile-language-server
 
 pip install pyright black flake8 jedi-language-server
 
