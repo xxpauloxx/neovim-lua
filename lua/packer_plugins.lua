@@ -64,7 +64,7 @@ return packer.startup(function(use)
   use "olexsmir/gopher.nvim"
   use "romgrk/barbar.nvim"
   use "catppuccin/nvim"
-  use "numToStr/Comment.nvim"
+  use "sudar/comments.vim"
   use "windwp/nvim-autopairs"
   use "folke/todo-comments.nvim"
   use "nvimdev/lspsaga.nvim"
