@@ -4,6 +4,7 @@ require("nvim-tree").setup({
       git_ignored = true,
       exclude = { vim.fn.stdpath "config" .. "/lua/custom" },
     },
+
     disable_netrw = true,
     hijack_netrw = true,
     hijack_cursor = true,
@@ -13,6 +14,7 @@ require("nvim-tree").setup({
       enable = true,
       update_root = false,
     },
+
     diagnostics = {
       enable = true,
       show_on_dirs = true,
@@ -24,10 +26,11 @@ require("nvim-tree").setup({
         error = "",
       },
     },
+
     view = {
       adaptive_size = true,
       side = "left",
-      width = 35,
+      width = 25,
       preserve_window_proportions = true,
     },
 
@@ -35,22 +38,35 @@ require("nvim-tree").setup({
       enable = true,
       ignore = true,
     },
+
     filesystem_watchers = {
       enable = true,
     },
+
     actions = {
       open_file = {
         resize_window = false,
       },
     },
+
     renderer = {
       root_folder_label = false,
       highlight_git = true,
       highlight_opened_files = "none",
-      special_files={"README.md", "Makefile", "pyproject.toml", "go.mod"},
+
+      special_files={
+        "Makefile",
+        "pyproject.toml",
+        "go.mod",
+        "go.sum",
+        "requirements.txt",
+        "Dockerfile",
+      },
+
       indent_markers = {
         enable = true,
       },
+
       icons = {
         show = {
           file = true,

@@ -1,11 +1,15 @@
+-- local function hello()
+--   return [[hello world]]
+-- end
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'catppuccin-macchiato',
+    theme = 'catppuccin-mocha',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
-      statusline = {},
+      statusline = {"nvim-tree", "NvimTree", "NvimTree_1"},
       winbar = {},
     },
     ignore_focus = {},
@@ -18,6 +22,7 @@ require('lualine').setup {
     }
   },
   sections = {
+    -- lualine_a = {'mode', hello},
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename'},

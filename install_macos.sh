@@ -2,6 +2,7 @@
 
 brew install neovim
 brew install curl
+brew install fzf
 brew install ag
 brew install ctags
 brew install tmate
@@ -11,6 +12,7 @@ brew install rust
 brew install rust-analyzer
 brew install rg
 brew install dockerfile-language-server
+brew install ctags
 
 pip install pyright black flake8 jedi-language-server
 

@@ -27,11 +27,9 @@ end
 
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"
-
   use "nvim-tree/nvim-tree.lua"
   use "nvim-tree/nvim-web-devicons"
   use "sheerun/vim-polyglot"
-
   use "lewis6991/gitsigns.nvim"
   use "sbdchd/vim-run"
   use "preservim/tagbar"
@@ -41,7 +39,6 @@ return packer.startup(function(use)
   use "editorconfig/editorconfig-vim"
   use "brooth/far.vim"
   use "mileszs/ack.vim"
-
   use "neovim/nvim-lspconfig"
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-buffer"
@@ -50,12 +47,10 @@ return packer.startup(function(use)
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-vsnip"
   use "hrsh7th/vim-vsnip"
-
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
-
   use "davidgranstrom/nvim-markdown-preview"
   use "akhaku/vim-java-unused-imports"
   use "google/vim-maktaba"
@@ -64,10 +59,26 @@ return packer.startup(function(use)
   use "olexsmir/gopher.nvim"
   use "romgrk/barbar.nvim"
   use "catppuccin/nvim"
-  use "sudar/comments.vim"
+  use "xxpauloxx/nvim-comments.vim"
   use "windwp/nvim-autopairs"
-  use "folke/todo-comments.nvim"
   use "nvimdev/lspsaga.nvim"
+  use {
+    'yanskun/gotests.nvim',
+    ft = 'go',
+    config = function()
+      require('gotests').setup()
+    end
+  }
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.6',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use "Shatur/neovim-ayu"
+
+  use {
+    "folke/trouble.nvim",
+    requires = { "nvim-tree/nvim-web-devicons" }
+  }
 
   -- use "github/copilot.vim"
 
