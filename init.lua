@@ -9,7 +9,7 @@ require("plugins/twilight")
 require("plugins/nvim-cmp")
 require("plugins/nvim-autopairs")
 require("plugins/nvim-lspsaga")
-require("plugins/nvim-telescope")
+require("plugins/gotests")
 
 require("core/settings")
 require("core/keymaps")

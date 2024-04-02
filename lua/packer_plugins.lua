@@ -26,6 +26,7 @@ if not status_ok then
 end
 
 return packer.startup(function(use)
+
   use "wbthomason/packer.nvim"
   use "nvim-tree/nvim-tree.lua"
   use "nvim-tree/nvim-web-devicons"
@@ -47,10 +48,7 @@ return packer.startup(function(use)
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-vsnip"
   use "hrsh7th/vim-vsnip"
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  }
+  use "nvim-lualine/lualine.nvim"
   use "davidgranstrom/nvim-markdown-preview"
   use "akhaku/vim-java-unused-imports"
   use "google/vim-maktaba"
@@ -62,23 +60,9 @@ return packer.startup(function(use)
   use "xxpauloxx/nvim-comments.vim"
   use "windwp/nvim-autopairs"
   use "nvimdev/lspsaga.nvim"
-  use {
-    'yanskun/gotests.nvim',
-    ft = 'go',
-    config = function()
-      require('gotests').setup()
-    end
-  }
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.6',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-  use "Shatur/neovim-ayu"
-
-  use {
-    "folke/trouble.nvim",
-    requires = { "nvim-tree/nvim-web-devicons" }
-  }
+  use "yanskun/gotests.nvim"
+  use "folke/trouble.nvim"
+  use "antosha417/nvim-lsp-file-operations"
 
   -- use "github/copilot.vim"
 

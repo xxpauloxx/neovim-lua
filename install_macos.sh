@@ -13,6 +13,7 @@ brew install rust-analyzer
 brew install rg
 brew install dockerfile-language-server
 brew install ctags
+brew install the_silver_searcher
 
 pip install pyright black flake8 jedi-language-server
 
