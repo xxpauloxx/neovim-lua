@@ -43,4 +43,3 @@ vim.cmd [[syntax on]]
 vim.cmd [[set nowrap]]
 vim.cmd [[set termguicolors]]
 vim.cmd [[colorscheme catppuccin-mocha]]
-

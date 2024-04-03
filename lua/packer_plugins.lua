@@ -63,6 +63,7 @@ return packer.startup(function(use)
   use "yanskun/gotests.nvim"
   use "folke/trouble.nvim"
   use "antosha417/nvim-lsp-file-operations"
+  use "fatih/vim-go"
 
   -- use "github/copilot.vim"
 
