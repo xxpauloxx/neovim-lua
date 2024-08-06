@@ -64,7 +64,15 @@ return packer.startup(function(use)
   use "folke/trouble.nvim"
   use "antosha417/nvim-lsp-file-operations"
   use "fatih/vim-go"
+  use "vim-test/vim-test"
+  use "wfxr/minimap.vim"
 
+  use {
+    "FabijanZulj/blame.nvim",
+    config = function()
+      require("blame").setup()
+    end
+  }
   -- use "github/copilot.vim"
 
   if packer_bootstrap then

@@ -6,6 +6,7 @@ end
 
 vim.g.mapleader = " "
 vim.g.barbar_auto_setup = false -- disable auto-setup
+vim.g.minimap_auto_start = 1
 
 vim.o.hidden = true
 vim.o.tabstop = 4
@@ -15,7 +16,6 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.termguicolors = true
 vim.o.background = "dark"
-vim.o.syntax = true
 vim.o.expandtab = true
 
 vim.opt.list = true
@@ -42,4 +42,4 @@ vim.cmd [[set mouse=a]]
 vim.cmd [[syntax on]]
 vim.cmd [[set nowrap]]
 vim.cmd [[set termguicolors]]
-vim.cmd [[colorscheme catppuccin-frappe]]
+vim.cmd [[colorscheme catppuccin-mocha]]

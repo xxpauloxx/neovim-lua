@@ -14,6 +14,7 @@ brew install rg
 brew install dockerfile-language-server
 brew install ctags
 brew install the_silver_searcher
+brew install code-minimap
 
 pip install pyright black flake8 jedi-language-server
 
