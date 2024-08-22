@@ -28,7 +28,7 @@ require("nvim-tree").setup({
     },
 
     view = {
-      adaptive_size = true,
+      adaptive_size = false,
       side = "left",
       width = 25,
       preserve_window_proportions = true,
@@ -74,7 +74,6 @@ require("nvim-tree").setup({
           folder_arrow = true,
           git = true,
         },
-  
         glyphs = {
           default = "󰈚",
           symlink = "",
