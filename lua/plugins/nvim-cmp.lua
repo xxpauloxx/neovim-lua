@@ -119,7 +119,7 @@ local language_servers = {"pyright",
                           "helm_ls",
                           "sqls",
                           "starlark_rust",
-                          "tsserver"}
+                          "ts_ls"}
 
 for _, lsp in ipairs(language_servers) do
     require('lspconfig')[lsp].setup {

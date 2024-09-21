@@ -55,7 +55,6 @@ return packer.startup(function(use)
   use "google/vim-codefmt"
   use "nvim-lua/plenary.nvim"
   use "olexsmir/gopher.nvim"
-  use "romgrk/barbar.nvim"
   use "catppuccin/nvim"
   use "xxpauloxx/nvim-comments.vim"
   use "windwp/nvim-autopairs"
@@ -65,7 +64,8 @@ return packer.startup(function(use)
   use "antosha417/nvim-lsp-file-operations"
   use "fatih/vim-go"
   use "vim-test/vim-test"
-  use "wfxr/minimap.vim"
+  use "nvim-treesitter/nvim-treesitter"
+  use "petertriho/nvim-scrollbar"
 
   use {
     "FabijanZulj/blame.nvim",
@@ -73,6 +73,7 @@ return packer.startup(function(use)
       require("blame").setup()
     end
   }
+
   -- use "github/copilot.vim"
 
   if packer_bootstrap then
