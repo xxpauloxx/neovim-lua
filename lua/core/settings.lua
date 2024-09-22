@@ -1,8 +1,10 @@
 local vim = vim
 
 if vim.fn.executable("ag") then
-    vim.g.ackprg = "ag --vimgrep"
+  vim.g.ackprg = "ag --vimgrep"
 end
+
+vim.g.codeium_enabled = true
 
 vim.g.mapleader = " "
 
@@ -36,8 +38,8 @@ vim.wo.colorcolumn = "80"
 vim.wo.relativenumber = false
 vim.wo.number = true
 
-vim.cmd [[set mouse=a]]
-vim.cmd [[syntax on]]
-vim.cmd [[set nowrap]]
-vim.cmd [[set termguicolors]]
-vim.cmd [[colorscheme catppuccin-frappe]]
+vim.cmd([[set mouse=a]])
+vim.cmd([[syntax on]])
+vim.cmd([[set nowrap]])
+vim.cmd([[set termguicolors]])
+vim.cmd([[colorscheme catppuccin-mocha]])

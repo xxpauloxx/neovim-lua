@@ -11,6 +11,7 @@ require("plugins/nvim-lspsaga")
 require("plugins/gotests")
 require("plugins/treesitter")
 require("plugins/nvim-scrollbar")
+require("plugins/conform")
 
 require("core/settings")
 require("core/keymaps")

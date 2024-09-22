@@ -1,1 +1,2 @@
-require('gotests').setup()
+require("gotests").setup()
+
