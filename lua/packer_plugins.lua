@@ -55,7 +55,6 @@ return packer.startup(function(use)
   use("nvim-lua/plenary.nvim")
   use("olexsmir/gopher.nvim")
   use("catppuccin/nvim")
-  use("xxpauloxx/nvim-comments.vim")
   use("windwp/nvim-autopairs")
   use("nvimdev/lspsaga.nvim")
   use("yanskun/gotests.nvim")
@@ -65,12 +64,17 @@ return packer.startup(function(use)
   use("vim-test/vim-test")
   use("nvim-treesitter/nvim-treesitter")
   use("petertriho/nvim-scrollbar")
-  use("Exafunction/codeium.vim")
   use("maxandron/goplements.nvim")
   use("rafaelsq/nvim-goc.lua")
   use("crusj/hierarchy-tree-go.nvim")
   use("mrcjkb/rustaceanvim")
   use("stevearc/conform.nvim")
+  use("numToStr/Comment.nvim")
+  use("olimorris/codecompanion.nvim")
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
   use({
     "FabijanZulj/blame.nvim",

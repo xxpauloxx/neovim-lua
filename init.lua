@@ -12,6 +12,8 @@ require("plugins/gotests")
 require("plugins/treesitter")
 require("plugins/nvim-scrollbar")
 require("plugins/conform")
+require("plugins/comment")
+require("plugins/codecompanion")
 
 require("core/settings")
 require("core/keymaps")
