@@ -71,17 +71,8 @@ return packer.startup(function(use)
   use("stevearc/conform.nvim")
   use("numToStr/Comment.nvim")
   use("olimorris/codecompanion.nvim")
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-
-  use({
-    "FabijanZulj/blame.nvim",
-    config = function()
-      require("blame").setup()
-    end,
-  })
+  use("FabijanZulj/blame.nvim")
+  use("nvim-telescope/telescope.nvim")
 
   if packer_bootstrap then
     require("packer").sync()

@@ -16,7 +16,8 @@ local plugins = {
     "nvim-scrollbar",
     "conform",
     "comment",
-    "codecompanion"
+    "codecompanion",
+    "blame"
 }
 
 -- Carregar plugins dinamicamente

@@ -1,43 +1,49 @@
+-- Configuração do plugin CodeCompanion
 require("codecompanion").setup({
+    -- Opções gerais
     opts = {
-        language = "Portuguese", -- Language used for the LLM
+        language = "Portuguese", -- Idioma usado pelo LLM
     },
+
+    -- Estratégias de interação
     strategies = {
         chat = {
-            adapter = "copilot",
+            adapter = "copilot", -- Adaptador para o modo de chat
         },
         inline = {
-            adapter = "copilot",
+            adapter = "copilot", -- Adaptador para sugestões inline
             keymaps = {
                 accept_change = {
-                    modes = { n = "ga" },
+                    modes = { n = "ga" }, -- Atalho para aceitar mudanças
                     description = "Accept the suggested change",
                 },
                 reject_change = {
-                    modes = { n = "gr" },
+                    modes = { n = "gr" }, -- Atalho para rejeitar mudanças
                     description = "Reject the suggested change",
                 },
             },
         },
     },
+
+    -- Configurações de exibição
     display = {
         chat = {
-            -- Change the default icons
+            -- Ícones personalizados para o buffer de chat
             icons = {
                 pinned_buffer = " ",
                 watched_buffer = "👀 ",
             },
-            -- Options to customize the UI of the chat buffer
+            -- Configurações da janela de chat
             window = {
-                layout = "vertical", -- float|vertical|horizontal|buffer
-                position = "right",    -- left|right|top|bottom (nil will default depending on vim.opt.plitright|vim.opt.splitbelow)
-                border = "single",
-                height = 0.8,
-                width = 0.45,
-                relative = "editor",
-                full_height = true, -- when set to false, vsplit will be used to open the chat buffer vs. botright/topleft vsplit
+                layout = "vertical", -- Layout: float|vertical|horizontal|buffer
+                position = "right",  -- Posição: left|right|top|bottom
+                border = "single",   -- Estilo da borda
+                height = 0.8,        -- Altura relativa
+                width = 0.45,        -- Largura relativa
+                relative = "editor", -- Relativo ao editor
+                full_height = true,  -- Usa altura total (false usa vsplit)
                 opts = {
-                    breakindent = true,
+                    breakindent = true, -- Indentação visual
                     cursorcolumn = false,
                     cursorline = false,
                     foldcolumn = "0",
@@ -46,21 +52,21 @@ require("codecompanion").setup({
                     numberwidth = 1,
                     signcolumn = "no",
                     spell = false,
-                    wrap = true,
+                    wrap = true, -- Quebra de linha habilitada
                 },
             },
         },
         inline = {
-            layout = "vertical", -- vertical|horizontal|buffer
+            layout = "vertical", -- Layout para sugestões inline
         },
         action_palette = {
-            width = 95,
-            height = 10,
-            prompt = "Prompt ",                 -- Prompt used for interactive LLM calls
-            provider = "telescope",             -- default|telescope|mini_pick
+            width = 95,                     -- Largura da paleta de ações
+            height = 10,                    -- Altura da paleta de ações
+            prompt = "Prompt ",             -- Texto do prompt
+            provider = "telescope",         -- Provedor: default|telescope|mini_pick
             opts = {
-                show_default_actions = true,    -- Show the default actions in the action palette?
-                show_default_prompt_library = true, -- Show the default prompt library in the action palette?
+                show_default_actions = true,    -- Mostrar ações padrão
+                show_default_prompt_library = true, -- Mostrar biblioteca de prompts padrão
             },
         },
     },

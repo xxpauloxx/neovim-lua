@@ -1,12 +1,17 @@
+-- Configuração do plugin Conform para formatação de código
 require("conform").setup({
+  -- Configuração de formatadores por tipo de arquivo
   formatters_by_ft = {
+    -- Para arquivos Lua, utiliza o formatador "stylua"
     lua = { "stylua" },
-    -- Conform will run multiple formatters sequentially
+
+    -- Para arquivos Python, executa os formatadores "isort" e "black" em sequência
     python = { "isort", "black" },
-    -- You can customize some of the format options for the filetype (:help conform.format)
+
+    -- Para arquivos Rust, utiliza "rustfmt" e um fallback para o formatador do LSP
     rust = { "rustfmt", lsp_format = "fallback" },
-    -- Conform will run the first available formatter
+
+    -- Para arquivos JavaScript, tenta "prettierd" e "prettier", parando após o primeiro disponível
     javascript = { "prettierd", "prettier", stop_after_first = true },
   },
 })
-

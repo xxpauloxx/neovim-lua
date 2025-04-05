@@ -1,49 +1,49 @@
+-- Configuração do plugin Illuminate para destacar referências no buffer
 require("illuminate").configure({
 
-  -- providers: provider used to get references in the buffer, ordered by priority
+  -- Provedores usados para obter referências no buffer, ordenados por prioridade
   providers = {
-    "lsp",
-    "treesitter",
-    "regex",
+    "lsp",        -- Usa o LSP para encontrar referências
+    "treesitter", -- Usa o Treesitter para análise de sintaxe
+    "regex",      -- Usa expressões regulares como fallback
   },
 
-  -- delay: delay in milliseconds
+  -- Atraso em milissegundos antes de destacar as referências
   delay = 100,
 
-  -- filetype_overrides: filetype specific overrides.
-  -- The keys are strings to represent the filetype while the values are tables that
-  -- supports the same keys passed to .configure except for filetypes_denylist and filetypes_allowlist
+  -- Sobrescritas específicas por tipo de arquivo
+  -- As chaves representam o tipo de arquivo e os valores são tabelas com configurações específicas
   filetype_overrides = {},
 
-  -- filetypes_denylist: filetypes to not illuminate, this overrides filetypes_allowlist
+  -- Lista de tipos de arquivo a serem ignorados para destaque
   filetypes_denylist = {
-    "dirvish",
-    "fugitive",
+    "dirvish",   -- Ignora buffers do plugin Dirvish
+    "fugitive",  -- Ignora buffers do plugin Fugitive
   },
 
-  -- filetypes_allowlist: filetypes to illuminate, this is overriden by filetypes_denylist
+  -- Lista de tipos de arquivo permitidos para destaque (sobrescrito por `filetypes_denylist`)
   filetypes_allowlist = {},
 
-  -- modes_denylist: modes to not illuminate, this overrides modes_allowlist
+  -- Lista de modos a serem ignorados para destaque
   modes_denylist = {},
 
-  -- modes_allowlist: modes to illuminate, this is overriden by modes_denylist
+  -- Lista de modos permitidos para destaque (sobrescrito por `modes_denylist`)
   modes_allowlist = {},
-  -- providers_regex_syntax_denylist: syntax to not illuminate, this overrides providers_regex_syntax_allowlist
-  -- Only applies to the 'regex' provider
-  -- Use :echom synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name')
+
+  -- Lista de sintaxes a serem ignoradas para destaque (aplicável apenas ao provedor `regex`)
   providers_regex_syntax_denylist = {},
-  -- providers_regex_syntax_allowlist: syntax to illuminate, this is overriden by providers_regex_syntax_denylist
-  -- Only applies to the 'regex' provider
-  -- Use :echom synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name')
+
+  -- Lista de sintaxes permitidas para destaque (sobrescrito por `providers_regex_syntax_denylist`)
   providers_regex_syntax_allowlist = {},
-  -- under_cursor: whether or not to illuminate under the cursor
+
+  -- Define se o texto sob o cursor deve ser destacado
   under_cursor = true,
-  -- large_file_cutoff: number of lines at which to use large_file_config
-  -- The `under_cursor` option is disabled when this cutoff is hit
+
+  -- Limite de linhas para considerar um arquivo como "grande"
+  -- O destaque sob o cursor será desativado quando esse limite for atingido
   large_file_cutoff = nil,
-  -- large_file_config: config to use for large files (based on large_file_cutoff).
-  -- Supports the same keys passed to .configure
-  -- If nil, vim-illuminate will be disabled for large files.
+
+  -- Configurações específicas para arquivos grandes (baseado em `large_file_cutoff`)
+  -- Se `nil`, o plugin será desativado para arquivos grandes
   large_file_overrides = nil,
 })

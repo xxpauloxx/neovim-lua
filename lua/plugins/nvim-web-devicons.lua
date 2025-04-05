@@ -1,43 +1,40 @@
+-- Configuração do plugin nvim-web-devicons para exibir ícones personalizados
 require("nvim-web-devicons").setup({
-  -- your personnal icons can go here (to override)
-  -- you can specify color or cterm_color instead of specifying both of them
-  -- DevIcon will be appended to `name`
+  -- Sobrescrever ícones padrão com configurações personalizadas
   override = {
     zsh = {
-      icon = "",
-      color = "#428850",
-      cterm_color = "65",
-      name = "Zsh",
+      icon = "", -- Ícone para arquivos Zsh
+      color = "#428850", -- Cor do ícone
+      cterm_color = "65", -- Cor para terminais cterm
+      name = "Zsh", -- Nome do ícone
     },
   },
-  -- globally enable different highlight colors per icon (default to true)
-  -- if set to false all icons will have the default icon's color
+
+  -- Habilitar cores diferentes para cada ícone (padrão: true)
   color_icons = true,
-  -- globally enable default icons (default to false)
-  -- will get overriden by `get_icons` option
+
+  -- Habilitar ícones padrão globalmente (padrão: false)
   default = true,
-  -- globally enable "strict" selection of icons - icon will be looked up in
-  -- different tables, first by filename, and if not found by extension; this
-  -- prevents cases when file doesn't have any extension but still gets some icon
-  -- because its name happened to match some extension (default to false)
+
+  -- Habilitar seleção "estrita" de ícones (padrão: false)
+  -- Ícones serão buscados primeiro pelo nome do arquivo e, se não encontrados, pela extensão
   strict = true,
-  -- same as `override` but specifically for overrides by filename
-  -- takes effect when `strict` is true
+
+  -- Sobrescrever ícones com base no nome do arquivo (requer `strict = true`)
   override_by_filename = {
     [".gitignore"] = {
-      icon = "",
-      color = "#f1502f",
-      name = "Gitignore",
+      icon = "", -- Ícone para arquivos .gitignore
+      color = "#f1502f", -- Cor do ícone
+      name = "Gitignore", -- Nome do ícone
     },
   },
-  -- same as `override` but specifically for overrides by extension
-  -- takes effect when `strict` is true
+
+  -- Sobrescrever ícones com base na extensão do arquivo (requer `strict = true`)
   override_by_extension = {
     ["log"] = {
-      icon = "",
-      color = "#81e043",
-      name = "Log",
+      icon = "", -- Ícone para arquivos de log
+      color = "#81e043", -- Cor do ícone
+      name = "Log", -- Nome do ícone
     },
   },
 })
-

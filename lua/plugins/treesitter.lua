@@ -1,83 +1,35 @@
+-- Configuração do plugin nvim-treesitter para análise e realce de sintaxe avançado
 require("nvim-treesitter.configs").setup({
-
+  -- Linguagens a serem instaladas
   ensure_installed = {
-    "c",
-    "lua",
-    "vim",
-    "vimdoc",
-    "query",
-    "markdown",
-    "markdown_inline",
-    "python",
-    "ruby",
-    "javascript",
-    "arduino",
-    "awk",
-    "c_sharp",
-    "cmake",
-    "clojure",
-    "asm",
-    "cpp",
-    "css",
-    "csv",
-    "dart",
-    "dockerfile",
-    "diff",
-    "editorconfig",
-    "erlang",
-    "gleam",
-    "go",
-    "gomod",
-    "helm",
-    "haskell",
-    "html",
-    "htmldjango",
-    "java",
-    "json",
-    "json5",
-    "kotlin",
-    "nasm",
-    "ocaml",
-    "ocaml_interface",
-    "proto",
-    "regex",
-    "rust",
-    "sql",
-    "svelte",
-    "toml",
-    "typescript",
-    "yaml",
-    "vue",
-    "xml",
+    "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline",
+    "python", "ruby", "javascript", "arduino", "awk", "c_sharp", "cmake",
+    "clojure", "asm", "cpp", "css", "csv", "dart", "dockerfile", "diff",
+    "editorconfig", "erlang", "gleam", "go", "gomod", "helm", "haskell",
+    "html", "htmldjango", "java", "json", "json5", "kotlin", "nasm",
+    "ocaml", "ocaml_interface", "proto", "regex", "rust", "sql", "svelte",
+    "toml", "typescript", "yaml", "vue", "xml",
   },
 
-  -- Install parsers synchronously (only applied to `ensure_installed`)
+  -- Instalar parsers de forma síncrona (aplicado apenas ao `ensure_installed`)
   sync_install = false,
 
-  -- Automatically install missing parsers when entering buffer
-  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+  -- Instalar parsers automaticamente ao abrir um buffer
+  -- Recomendação: defina como `false` se você não tiver o CLI do `tree-sitter` instalado localmente
   auto_install = true,
 
-  -- List of parsers to ignore installing (or "all")
+  -- Lista de parsers a serem ignorados durante a instalação
   ignore_install = {},
 
-  ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
-  -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
-
+  -- Configuração de realce de sintaxe
   highlight = {
-    enable = true,
+    enable = true, -- Habilitar realce de sintaxe com Tree-sitter
 
-    -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
-    -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
-    -- the name of the parser)
-    -- list of language that will be disabled
+    -- Lista de linguagens para as quais o realce será desabilitado
     disable = {},
 
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
+    -- Executar `:h syntax` e Tree-sitter ao mesmo tempo
+    -- Defina como `true` se depender do 'syntax' padrão (pode causar lentidão ou realces duplicados)
     additional_vim_regex_highlighting = false,
   },
 })
-
