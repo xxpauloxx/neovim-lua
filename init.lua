@@ -1,19 +1,29 @@
+-- Gerenciador de plugins
 require("packer_plugins")
 
-require("plugins/nvim-tree")
-require("plugins/nvim-web-devicons")
-require("plugins/lualine")
-require("plugins/gitsigns")
-require("plugins/twilight")
-require("plugins/nvim-cmp")
-require("plugins/nvim-autopairs")
-require("plugins/nvim-lspsaga")
-require("plugins/gotests")
-require("plugins/treesitter")
-require("plugins/nvim-scrollbar")
-require("plugins/conform")
-require("plugins/comment")
-require("plugins/codecompanion")
+-- Lista de plugins a serem carregados
+local plugins = {
+    "nvim-tree",
+    "nvim-web-devicons",
+    "lualine",
+    "gitsigns",
+    "twilight",
+    "nvim-cmp",
+    "nvim-autopairs",
+    "nvim-lspsaga",
+    "gotests",
+    "treesitter",
+    "nvim-scrollbar",
+    "conform",
+    "comment",
+    "codecompanion"
+}
 
+-- Carregar plugins dinamicamente
+for _, plugin in ipairs(plugins) do
+    require("plugins/" .. plugin)
+end
+
+-- Configurações principais
 require("core/settings")
 require("core/keymaps")

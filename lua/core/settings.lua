@@ -4,8 +4,6 @@ if vim.fn.executable("ag") then
   vim.g.ackprg = "ag --vimgrep"
 end
 
-vim.g.codeium_enabled = true
-
 vim.g.mapleader = " "
 
 vim.o.hidden = true
@@ -43,3 +41,8 @@ vim.cmd([[syntax on]])
 vim.cmd([[set nowrap]])
 vim.cmd([[set termguicolors]])
 vim.cmd([[colorscheme catppuccin-mocha]])
+
+vim.fn.sign_define("DiagnosticSignError", {text = "•", texthl = "DiagnosticSignError"})
+vim.fn.sign_define("DiagnosticSignWarn", {text = "•", texthl = "DiagnosticSignWarn"})
+vim.fn.sign_define("DiagnosticSignInfo", {text = "•", texthl = "DiagnosticSignInfo"})
+vim.fn.sign_define("DiagnosticSignHint", {text = "•", texthl = "DiagnosticSignHint"})
