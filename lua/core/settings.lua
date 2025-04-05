@@ -1,45 +1,10 @@
 local vim = vim
 
 if vim.fn.executable("ag") then
-    vim.g.ackprg = "ag --vimgrep"
+  vim.g.ackprg = "ag --vimgrep"
 end
 
 vim.g.mapleader = " "
-vim.g.barbar_auto_setup = false -- disable auto-setup
-vim.g.coc_global_extensions = {
-    "coc-cmake",
-    "coc-docker",
-    "coc-eslint",
-    "coc-go",
-    "coc-highlight",
-    "coc-java",
-    "coc-java-lombok",
-    "coc-pyright",
-    "coc-jest",
-    "coc-json",
-    "coc-yaml",
-    "coc-xml",
-    "coc-lua",
-    "coc-webpack",
-    "coc-htmldjango",
-    "coc-format-json",
-    "coc-vetur",
-    "coc-svelte",
-    "coc-sql",
-    "coc-prettier",
-    "coc-html",
-    "coc-css",
-    "coc-tsserver",
-    "coc-flutter",
-    "coc-htmlhint",
-    "coc-html-css-support",
-    "coc-clangd",
-    "coc-marketplace",
-    "coc-explorer",
-    "coc-rust-analyzer",
-    "coc-pairs",
-    "coc-diagnostic"
-}
 
 vim.o.hidden = true
 vim.o.tabstop = 4
@@ -49,7 +14,6 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.termguicolors = true
 vim.o.background = "dark"
-vim.o.syntax = true
 vim.o.expandtab = true
 
 vim.opt.list = true
@@ -72,9 +36,13 @@ vim.wo.colorcolumn = "80"
 vim.wo.relativenumber = false
 vim.wo.number = true
 
-vim.cmd [[set mouse=a]]
-vim.cmd [[syntax on]]
-vim.cmd [[set nowrap]]
-vim.cmd [[inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]]
-vim.cmd [[set termguicolors]]
-vim.cmd [[colorscheme catppuccin-macchiato]]
+vim.cmd([[set mouse=a]])
+vim.cmd([[syntax on]])
+vim.cmd([[set nowrap]])
+vim.cmd([[set termguicolors]])
+vim.cmd([[colorscheme catppuccin-mocha]])
+
+vim.fn.sign_define("DiagnosticSignError", {text = "•", texthl = "DiagnosticSignError"})
+vim.fn.sign_define("DiagnosticSignWarn", {text = "•", texthl = "DiagnosticSignWarn"})
+vim.fn.sign_define("DiagnosticSignInfo", {text = "•", texthl = "DiagnosticSignInfo"})
+vim.fn.sign_define("DiagnosticSignHint", {text = "•", texthl = "DiagnosticSignHint"})
