@@ -1,7 +1,7 @@
 local vim = vim
 
 if vim.fn.executable("ag") then
-	vim.g.ackprg = "ag --vimgrep"
+  vim.g.ackprg = "ag --vimgrep"
 end
 
 vim.g.mapleader = " "
@@ -31,9 +31,9 @@ vim.opt.smarttab = true
 vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.mouse = "a"          -- Habilita o uso do mouse
-vim.opt.syntax = "on"        -- Ativa a sintaxe
-vim.opt.wrap = false         -- Desativa quebra de linha
+vim.opt.mouse = "a" -- Habilita o uso do mouse
+vim.opt.syntax = "on" -- Ativa a sintaxe
+vim.opt.wrap = false -- Desativa quebra de linha
 vim.opt.termguicolors = true -- Habilita cores verdadeiras no terminal
 
 vim.wo.colorcolumn = "80"
@@ -42,14 +42,28 @@ vim.wo.number = true
 
 vim.cmd.colorscheme("catppuccin-mocha") -- Define o esquema de cores
 
+
 vim.diagnostic.config({
 	virtual_text = {
-		prefix = '■', -- Could be '●', '▎', 'x'
+		current_line = false,
+		prefix = '■',
 		spacing = 4,
+		severity = {
+			[vim.diagnostic.severity.ERROR] = { text = '✘', texthl = 'DiagnosticError' },}
+			
+    },
+	virtual_lines = { current_line = true },
+	float = {
+		focusable = true,
+		style = "minimal",
+		border = "rounded",
+		source = true,
+		header = "",
 	},
 	signs = {
 		text = { [1] = '•', ['WARN'] = '•', ['HINT'] = '•', ['INFO'] = '•' },
-	},
+	  },
 	underline = true,
 	severity_sort = true,
 })
+
