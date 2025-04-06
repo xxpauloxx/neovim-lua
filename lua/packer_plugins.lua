@@ -74,10 +74,6 @@ return packer.startup(function(use)
   use("FabijanZulj/blame.nvim")
   use("nvim-telescope/telescope.nvim")
 
-  use { "rcarriga/nvim-dap-ui",
-    requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"}
-  }
-
   if packer_bootstrap then
     require("packer").sync()
   end

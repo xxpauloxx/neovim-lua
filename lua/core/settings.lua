@@ -1,7 +1,7 @@
 local vim = vim
 
 if vim.fn.executable("ag") then
-  vim.g.ackprg = "ag --vimgrep"
+	vim.g.ackprg = "ag --vimgrep"
 end
 
 vim.g.mapleader = " "
@@ -31,18 +31,25 @@ vim.opt.smarttab = true
 vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.mouse = "a"          -- Habilita o uso do mouse
+vim.opt.syntax = "on"        -- Ativa a sintaxe
+vim.opt.wrap = false         -- Desativa quebra de linha
+vim.opt.termguicolors = true -- Habilita cores verdadeiras no terminal
 
 vim.wo.colorcolumn = "80"
 vim.wo.relativenumber = false
 vim.wo.number = true
 
-vim.cmd([[set mouse=a]])
-vim.cmd([[syntax on]])
-vim.cmd([[set nowrap]])
-vim.cmd([[set termguicolors]])
-vim.cmd([[colorscheme catppuccin-mocha]])
+vim.cmd.colorscheme("catppuccin-mocha") -- Define o esquema de cores
 
-vim.fn.sign_define("DiagnosticSignError", {text = "•", texthl = "DiagnosticSignError"})
-vim.fn.sign_define("DiagnosticSignWarn", {text = "•", texthl = "DiagnosticSignWarn"})
-vim.fn.sign_define("DiagnosticSignInfo", {text = "•", texthl = "DiagnosticSignInfo"})
-vim.fn.sign_define("DiagnosticSignHint", {text = "•", texthl = "DiagnosticSignHint"})
+vim.diagnostic.config({
+	virtual_text = {
+		prefix = '■', -- Could be '●', '▎', 'x'
+		spacing = 4,
+	},
+	signs = {
+		text = { [1] = '•', ['WARN'] = '•', ['HINT'] = '•', ['INFO'] = '•' },
+	},
+	underline = true,
+	severity_sort = true,
+})

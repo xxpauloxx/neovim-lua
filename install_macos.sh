@@ -17,8 +17,9 @@ brew install the_silver_searcher
 brew install code-minimap
 brew install prettier
 brew install stylua
+brew install fd
 
-pip install pyright black flake8 jedi-language-server
+pip install pyright black flake8 jedi-language-server isort black
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 go install github.com/ofabry/go-callvis@latest
 

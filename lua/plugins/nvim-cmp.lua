@@ -1,43 +1,61 @@
 -- Configuração do plugin nvim-cmp para autocompletar
-local vim = vim
 local cmp = require("cmp")
+local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
--- Configuração principal do nvim-cmp
+-- Função para configurar mapeamentos de teclas para o LSP
+local function setup_lsp_keymaps(bufnr)
+  local bufmap = function(mode, lhs, rhs, desc)
+    local opts = { buffer = bufnr, desc = desc }
+    vim.keymap.set(mode, lhs, rhs, opts)
+  end
+
+  bufmap("n", "K", vim.lsp.buf.hover, "Exibir informações do símbolo")
+  bufmap("n", "gd", vim.lsp.buf.definition, "Ir para definição")
+  bufmap("n", "gD", vim.lsp.buf.declaration, "Ir para declaração")
+  bufmap("n", "gi", vim.lsp.buf.implementation, "Listar implementações")
+  bufmap("n", "go", vim.lsp.buf.type_definition, "Ir para definição de tipo")
+  bufmap("n", "gr", vim.lsp.buf.references, "Listar referências")
+  bufmap("n", "gs", vim.lsp.buf.signature_help, "Exibir assinatura da função")
+  bufmap("n", "rn", vim.lsp.buf.rename, "Renomear símbolo")
+  bufmap("n", "ca", vim.lsp.buf.code_action, "Ações de código")
+  bufmap("n", "gl", vim.diagnostic.open_float, "Exibir diagnósticos")
+  bufmap("n", "[d", vim.diagnostic.goto_prev, "Ir para diagnóstico anterior")
+  bufmap("n", "]d", vim.diagnostic.goto_next, "Ir para próximo diagnóstico")
+end
+
+-- Configuração do nvim-cmp
 cmp.setup({
   snippet = {
-    -- Configuração para expandir snippets usando o plugin VSnip
     expand = function(args)
       vim.fn["vsnip#anonymous"](args.body)
     end,
   },
   window = {
-    -- Configuração de janelas com bordas para autocompletar e documentação
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
-    -- Mapeamentos para navegação e controle do menu de autocompletar
-    ["<C-b>"] = cmp.mapping.scroll_docs(-4), -- Scroll para cima na documentação
-    ["<C-f>"] = cmp.mapping.scroll_docs(4),  -- Scroll para baixo na documentação
-    ["<C-Space>"] = cmp.mapping.complete(),  -- Abrir menu de autocompletar
-    ["<C-e>"] = cmp.mapping.abort(),         -- Fechar menu de autocompletar
-    ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Confirmar seleção
+    ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-f>"] = cmp.mapping.scroll_docs(4),
+    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<C-e>"] = cmp.mapping.abort(),
+    ["<CR>"] = cmp.mapping.confirm({ select = true }),
   }),
   sources = cmp.config.sources({
-    { name = "nvim_lsp" }, -- Fonte: LSP
-    { name = "vsnip" },    -- Fonte: Snippets
+    { name = "nvim_lsp" },
+    { name = "vsnip" },
   }, {
-    { name = "buffer" },   -- Fonte: Buffer atual
+    { name = "buffer" },
   }),
 })
 
--- Configuração específica para o tipo de arquivo "gitcommit"
+-- Configuração para tipos de arquivo específicos
 cmp.setup.filetype("gitcommit", {
   sources = cmp.config.sources({
-    { name = "git" },      -- Fonte: Git
+    { name = "git" },
   }, {
-    { name = "buffer" },   -- Fonte: Buffer atual
+    { name = "buffer" },
   }),
 })
 
@@ -45,7 +63,7 @@ cmp.setup.filetype("gitcommit", {
 cmp.setup.cmdline({ "/", "?" }, {
   mapping = cmp.mapping.preset.cmdline(),
   sources = {
-    { name = "buffer" },   -- Fonte: Buffer atual
+    { name = "buffer" },
   },
 })
 
@@ -53,39 +71,13 @@ cmp.setup.cmdline({ "/", "?" }, {
 cmp.setup.cmdline(":", {
   mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
-    { name = "path" },     -- Fonte: Caminhos de arquivos
+    { name = "path" },
   }, {
-    { name = "cmdline" },  -- Fonte: Comandos
+    { name = "cmdline" },
   }),
-  matching = { disallow_symbol_nonprefix_matching = false }, -- Permitir correspondência parcial
 })
 
--- Configuração de ações do LSP ao anexar a um buffer
-vim.api.nvim_create_autocmd("LspAttach", {
-  desc = "LSP actions",
-  callback = function()
-    local bufmap = function(mode, lhs, rhs)
-      local opts = { buffer = true }
-      vim.keymap.set(mode, lhs, rhs, opts)
-    end
-
-    -- Mapeamentos para ações do LSP
-    bufmap("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>")             -- Exibir informações do símbolo
-    bufmap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>")       -- Ir para definição
-    bufmap("n", "GD", "<cmd>lua vim.lsp.buf.declaration()<cr>")      -- Ir para declaração
-    bufmap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>")   -- Listar implementações
-    bufmap("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<cr>")  -- Ir para definição de tipo
-    bufmap("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>")       -- Listar referências
-    bufmap("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>")   -- Exibir assinatura da função
-    bufmap("n", "rn", "<cmd>lua vim.lsp.buf.rename()<cr>")           -- Renomear símbolo
-    bufmap("n", "ca", "<cmd>lua vim.lsp.buf.code_action()<cr>")      -- Ações de código
-    bufmap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>")    -- Exibir diagnósticos
-    bufmap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>")     -- Ir para diagnóstico anterior
-    bufmap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>")     -- Ir para próximo diagnóstico
-  end,
-})
-
--- Configuração dos servidores de linguagem suportados
+-- Lista de servidores de linguagem
 local language_servers = {
   "pyright",        -- Python
   "gopls",          -- Go
@@ -96,23 +88,50 @@ local language_servers = {
   "ccls",           -- C/C++
   "cssls",          -- CSS
   "cmake",          -- CMake
-  "css_variables",  -- CSS Variables
   "dockerls",       -- Docker
   "dartls",         -- Dart
   "eslint",         -- JavaScript/TypeScript Linting
-  "flow",           -- Flow
   "graphql",        -- GraphQL
   "html",           -- HTML
-  "htmx",           -- HTMX
-  "helm_ls",        -- Helm
-  "sqls",           -- SQL
-  "starlark_rust",  -- Starlark
-  "ts_ls",          -- TypeScript
+  "ts_ls",       -- TypeScript
+  "bashls",         -- Bash
+  "yamlls",         -- YAML
+  "marksman",       -- Markdown
+  "terraformls",    -- Terraform
+  "clangd",         -- C/C++ (alternativa ao ccls)
 }
 
 -- Configuração de cada servidor de linguagem
 for _, lsp in ipairs(language_servers) do
-  require("lspconfig")[lsp].setup({
-    capabilities = capabilities, -- Habilitar recursos adicionais do LSP
+  lspconfig[lsp].setup({
+    capabilities = capabilities,
+    on_attach = function(_, bufnr)
+      setup_lsp_keymaps(bufnr)
+    end,
   })
 end
+
+-- Configuração adicional para o servidor Lua (lua_ls)
+lspconfig.lua_ls.setup({
+  capabilities = capabilities,
+  on_attach = function(_, bufnr)
+    setup_lsp_keymaps(bufnr)
+  end,
+  settings = {
+    Lua = {
+      runtime = {
+        version = "LuaJIT",
+      },
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false,
+      },
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+})
