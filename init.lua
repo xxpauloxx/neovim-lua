@@ -17,7 +17,7 @@ local plugins = {
     "conform",
     "comment",
     "codecompanion",
-    "blame"
+    "blame",
 }
 
 -- Carregar plugins dinamicamente
