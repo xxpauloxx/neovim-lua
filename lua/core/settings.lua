@@ -49,7 +49,8 @@ vim.diagnostic.config({
 		prefix = '■',
 		spacing = 4,
 		severity = {
-			[vim.diagnostic.severity.ERROR] = { text = '✘', texthl = 'DiagnosticError' },}
+			[vim.diagnostic.severity.ERROR] = {},
+		}
 			
     },
 	virtual_lines = { current_line = true },
@@ -61,7 +62,9 @@ vim.diagnostic.config({
 		header = "",
 	},
 	signs = {
-		text = { [1] = '•', ['WARN'] = '•', ['HINT'] = '•', ['INFO'] = '•' },
+		text = { 
+			[1] = '•', ['WARN'] = '•', ['HINT'] = '•', ['INFO'] = '•' 
+		},
 	  },
 	underline = true,
 	severity_sort = true,
