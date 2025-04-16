@@ -22,52 +22,52 @@ require("scrollbar").setup({
   -- Configuração de marcas (marcadores na barra de rolagem)
   marks = {
     Cursor = {
-      text = "•", -- Indicador para a posição do cursor
+      text = "▪", -- Indicador para a posição do cursor
       priority = 0, -- Prioridade mais baixa
       highlight = "Normal", -- Destaque aplicado
     },
     Search = {
-      text = { "-", "=" }, -- Indicador para resultados de busca
+      text = { "▪", "▪" }, -- Indicador para resultados de busca
       priority = 1,
       highlight = "Search",
     },
     Error = {
-      text = { "-", "=" }, -- Indicador para erros
+      text = { "▪", "▪" }, -- Indicador para erros
       priority = 2,
       highlight = "DiagnosticVirtualTextError",
     },
     Warn = {
-      text = { "-", "=" }, -- Indicador para avisos
+      text = { "▪", "▪" }, -- Indicador para avisos
       priority = 3,
       highlight = "DiagnosticVirtualTextWarn",
     },
     Info = {
-      text = { "-", "=" }, -- Indicador para informações
+      text = { "▪", "▪" }, -- Indicador para informações
       priority = 4,
       highlight = "DiagnosticVirtualTextInfo",
     },
     Hint = {
-      text = { "-", "=" }, -- Indicador para dicas
+      text = { "▪", "▪" }, -- Indicador para dicas
       priority = 5,
       highlight = "DiagnosticVirtualTextHint",
     },
     Misc = {
-      text = { "-", "=" }, -- Indicador para outros tipos de mensagens
+      text = { "▪", "▪" }, -- Indicador para outros tipos de mensagens
       priority = 6,
       highlight = "Normal",
     },
     GitAdd = {
-      text = "┆", -- Indicador para adições no Git
+      text = "▪", -- Indicador para adições no Git
       priority = 7,
       highlight = "GitSignsAdd",
     },
     GitChange = {
-      text = "┆", -- Indicador para alterações no Git
+      text = "▪", -- Indicador para alterações no Git
       priority = 7,
       highlight = "GitSignsChange",
     },
     GitDelete = {
-      text = "▁", -- Indicador para exclusões no Git
+      text = "▪", -- Indicador para exclusões no Git
       priority = 7,
       highlight = "GitSignsDelete",
     },

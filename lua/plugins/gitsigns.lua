@@ -4,8 +4,8 @@ require("gitsigns").setup({
   signs = {
     add          = { text = "┃" }, -- Adição de linhas
     change       = { text = "┃" }, -- Alteração de linhas
-    delete       = { text = "•" }, -- Exclusão de linhas
-    topdelete    = { text = "•" }, -- Exclusão de linhas no topo
+    delete       = { text = "▪" }, -- Exclusão de linhas
+    topdelete    = { text = "▪" }, -- Exclusão de linhas no topo
     changedelete = { text = "┃" }, -- Alteração e exclusão de linhas
     untracked    = { text = "┃" }, -- Linhas não rastreadas
   },
@@ -13,12 +13,12 @@ require("gitsigns").setup({
   -- Configurações gerais
   signcolumn = true,      -- Exibir sinais na coluna de sinais (toggle com `:Gitsigns toggle_signs`)
   numhl = true,           -- Realçar números de linha (toggle com `:Gitsigns toggle_numhl`)
-  linehl = false,         -- Realçar linhas inteiras (toggle com `:Gitsigns toggle_linehl`)
+  linehl = true,         -- Realçar linhas inteiras (toggle com `:Gitsigns toggle_linehl`)
   word_diff = false,      -- Mostrar diferenças por palavra (toggle com `:Gitsigns toggle_word_diff`)
 
   -- Monitoramento do diretório Git
   watch_gitdir = {
-    interval = 1000,      -- Intervalo de atualização em milissegundos
+    interval = 2000,      -- Intervalo de atualização em milissegundos
     follow_files = true,  -- Seguir arquivos movidos ou renomeados
   },
 

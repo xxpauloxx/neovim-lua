@@ -28,10 +28,10 @@ require("nvim-tree").setup({
     show_on_dirs = true, -- Mostrar diagnósticos em diretórios
     show_on_open_dirs = true, -- Mostrar diagnósticos em diretórios abertos
     icons = {
-      hint = "•", -- Ícone para dicas
-      info = "•", -- Ícone para informações
-      warning = "•", -- Ícone para avisos
-      error = "•", -- Ícone para erros
+      hint = "▪", -- Ícone para dicas
+      info = "▪", -- Ícone para informações
+      warning = "▪", -- Ícone para avisos
+      error = "▪", -- Ícone para erros
     },
   },
 
@@ -104,13 +104,13 @@ require("nvim-tree").setup({
           arrow_closed = "", -- Ícone para setas fechadas
         },
         git = {
-          unstaged = "•", -- Ícone para alterações não preparadas
-          staged = "•", -- Ícone para alterações preparadas
-          unmerged = "•", -- Ícone para conflitos não resolvidos
-          renamed = "•", -- Ícone para arquivos renomeados
-          untracked = "•", -- Ícone para arquivos não rastreados
-          deleted = "•", -- Ícone para arquivos excluídos
-          ignored = "•", -- Ícone para arquivos ignorados
+          unstaged = "▪", -- Ícone para alterações não preparadas
+          staged = "▪", -- Ícone para alterações preparadas
+          unmerged = "▪", -- Ícone para conflitos não resolvidos
+          renamed = "▪", -- Ícone para arquivos renomeados
+          untracked = "▪", -- Ícone para arquivos não rastreados
+          deleted = "▪", -- Ícone para arquivos excluídos
+          ignored = "▪", -- Ícone para arquivos ignorados
         },
       },
     },

@@ -46,7 +46,7 @@ vim.cmd.colorscheme("catppuccin-mocha") -- Define o esquema de cores
 vim.diagnostic.config({
 	virtual_text = {
 		current_line = false,
-		prefix = '■',
+		prefix = '▪',
 		spacing = 4,
 		severity = {
 			[vim.diagnostic.severity.ERROR] = {},
@@ -63,7 +63,7 @@ vim.diagnostic.config({
 	},
 	signs = {
 		text = { 
-			[1] = '•', ['WARN'] = '•', ['HINT'] = '•', ['INFO'] = '•' 
+			[1] = '▪', ['WARN'] = '▪', ['HINT'] = '▪', ['INFO'] = '▪' 
 		},
 	  },
 	underline = true,

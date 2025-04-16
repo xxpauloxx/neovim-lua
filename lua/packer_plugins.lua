@@ -73,6 +73,7 @@ return packer.startup(function(use)
   use("olimorris/codecompanion.nvim")
   use("FabijanZulj/blame.nvim")
   use("nvim-telescope/telescope.nvim")
+  use("sainnhe/everforest")
 
   if packer_bootstrap then
     require("packer").sync()
